@@ -4,7 +4,7 @@ Status: VERIFIED = fetched and inspected by this project; UNVERIFIED = known but
 
 | id | publisher | tier | status | notes |
 |---|---|---|---|---|
-| epa_xact_metals | EPA Region 7 (ArcGIS org "U.S. EPA", owner Region7.Start_EPAEXT) | T1 | VERIFIED 25 Nov | Xact XRF metals; fields Mon_Date_Time, Mon_Results, Mon_Units (ug/m3), Air_Station_ID; 4 stations AS01-AS04; 325 rows at first capture |
+| epa_xact_metals | EPA Region 7 (ArcGIS org "U.S. EPA", owner Region7.Start_EPAEXT) | T1 | VERIFIED 25 Nov | Xact XRF metals; EPA viewer labels the value 'Lead Concentration (µg/m3)' and shows 1 decimal place; fields Mon_Date_Time, Mon_Results, Mon_Units (ug/m3), Air_Station_ID; 4 stations AS01-AS04; 325 rows at first capture |
 | epa_air_stations | EPA Region 7 | T1 | VERIFIED 25 Nov | 43 stations, instrument types (DustTrak, AreaRAE, air cassette, Summa) |
 | epa_viewer_experience / _webmap | EPA Region 7 | T1 | VERIFIED 25 Nov | "Iowa Army Ammunition Plant Response Data Viewer"; linked from Illinois EPA page |
 | epa_osc_site | EPA OSC, site_id 17211 | T1 | VERIFIED 25 Nov | |
@@ -16,7 +16,7 @@ Status: VERIFIED = fetched and inspected by this project; UNVERIFIED = known but
 | metar_awc | NOAA AWC | T1 | VERIFIED 25 Nov | 3-hour window per run |
 | iem_asos | Iowa Environmental Mesonet | T1 | VERIFIED 25 Nov | yesterday + today, UTC |
 | airnow_hourly | EPA AirNow files | T1 (preliminary) | VERIFIED 25 Nov | ADR 0002 |
-| IEPA PDFs on d34w7g4gy10iej.cloudfront.net | Illinois EPA | T1 | UNVERIFIED | host not yet allowed |
+| iepa_pdf_77827, iepa_pdf_78382 | Illinois EPA (CloudFront) | T1 | VERIFIED 25 Nov | 167 KB and 621 KB PDFs |
 | HRRR (noaa-hrrr-bdp-pds) | NOAA | T1 | UNVERIFIED | Stage 1; permanent archive |
 | EarthScope / Raspberry Shake FDSN | | T1 | UNVERIFIED | Stage 1; permanent archive |
 

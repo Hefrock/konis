@@ -19,7 +19,7 @@ EPA_ARCGIS = "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services"
 @dataclass(frozen=True)
 class Source:
     source_id: str
-    kind: str  # page | arcgis_layer | arcgis_item | json | csv | airnow_hourly
+    kind: str  # page | file | arcgis_layer | arcgis_item | json | csv | airnow_hourly
     url: str
     tier: str = "T1"
     publisher: str = ""
@@ -69,6 +69,12 @@ SOURCES: tuple[Source, ...] = (
         Source(f"army_article_{n}", "page", f"https://www.army.mil/article/{n}",
                publisher="U.S. Army", must_contain=("lead", "ammunition"))
         for n in (297039, 297076, 297078, 297079, 297080)
+    ),
+    *(
+        Source(f"iepa_pdf_{n}", "file", f"https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_{n}.pdf",
+               publisher="Illinois EPA", ext="pdf", min_bytes=1000,
+               note="PDF linked from the Illinois EPA updates page")
+        for n in (77827, 78382)
     ),
     # --- Meteorology ---
     Source("metar_awc", "json",
