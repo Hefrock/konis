@@ -1,0 +1,39 @@
+name: watchdog
+
+# Backup trigger (ilara lesson 1 / ADR 0006 there): if no capture has been committed for
+# 75 minutes, start one and raise an alert. Runs at different minutes from ingest-live.
+on:
+  schedule:
+    - cron: "52 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  actions: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Check freshness of capture logs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          latest=$(ls -1 data/capture_log/*/*.jsonl 2>/dev/null | xargs -r tail -qn1 \
+                   | python3 -c "import sys,json;print(max((json.loads(l)['fetched_at_utc'] for l in sys.stdin if l.strip()),default=''))")
+          echo "latest capture: ${latest:-none}"
+          age=$(python3 -c "import sys,datetime as d;s=sys.argv[1];print(int((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(s)).total_seconds()//60) if s else 99999)" "$latest")
+          echo "age minutes: $age"
+          if [ "$age" -gt 75 ]; then
+            gh workflow run ingest_live.yml --ref "${GITHUB_REF_NAME}"
+            gh label create capture-failure --color B60205 --force >/dev/null || true
+            title="capture stale"
+            n=$(gh issue list --label capture-failure --state open --search "in:title \"$title\"" --json number -q '.[0].number')
+            msg="No capture committed for ${age} minutes (latest ${latest:-none}). Backup run dispatched."
+            if [ -n "$n" ]; then gh issue comment "$n" --body "$msg"; else gh issue create --title "$title" --label capture-failure --body "$msg"; fi
+          fi

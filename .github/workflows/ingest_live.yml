@@ -1,0 +1,74 @@
+name: ingest-live
+
+# Stage 0 capture. Schedule source of truth: docs/adr/0003-capture-schedule.md.
+# Off the hour (GitHub's free scheduler is most delayed at :00; ilara lesson 6).
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ingest-live
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      # Stage 2 collectors read these; unset is fine for Stage 0.
+      AIRNOW_API_KEY: ${{ secrets.AIRNOW_API_KEY }}
+      PURPLEAIR_API_KEY: ${{ secrets.PURPLEAIR_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "BASE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Capture (raw saved first; unchanged content only logged)
+        run: konis capture --summary-out "$RUNNER_TEMP/summary.json"
+
+      - name: Commit raw and capture log
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -q -m "data: capture ${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          fi
+
+      - name: Guards before push
+        run: konis guard --bot --base "$BASE_SHA"
+
+      - name: Push with rebase retry
+        run: .github/scripts/push-with-retry.sh "${GITHUB_REF_NAME}"
+
+      - name: Alerts (open / update / close capture-failure issues)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f "$RUNNER_TEMP/summary.json" ]; then
+            python -m konis.alerts_cli "$RUNNER_TEMP/summary.json"
+          else
+            gh issue create --title "capture run crashed: ${GITHUB_RUN_ID}" \
+              --label capture-failure \
+              --body "The capture step did not produce a summary. ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+              || true
+          fi
