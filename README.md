@@ -4,6 +4,22 @@
 
 Named after the Ancient Greek word for *fine dust, powder, or ash*, `konis` tracks airborne particulate proxies, wind trajectories, and seismic waveforms across Southeast Iowa, Northern Missouri, and Western Illinois following the November 25, 2026 controlled detonation of degraded lead azide ($\text{Pb(N}_3)_2$) in Middletown, Iowa.
 
+> **Unofficial independent project.** Not public health or medical guidance, and not affiliated
+> with or endorsed by EPA, the U.S. Army, or any state agency. For official information see
+> [EPA's response site](https://response.epa.gov/site/site_profile.aspx?site_id=17211),
+> [Iowa HSEMD](https://homelandsecurity.iowa.gov/iowa-army-munitions-disposition-resources),
+> [Iowa HHS](https://hhs.iowa.gov/health-prevention/environmental-health/lead-exposure-surveillance)
+> and [Illinois EPA](https://epa.illinois.gov/iowa-plant-updates.html).
+
+## Status
+
+**Stage 0 (capture) is running.** Every 30 minutes the pipeline archives official pages, EPA's
+public Xact metals layer, AirNow regulatory monitors in the study box, and METAR/ASOS
+weather, saving each change exactly as received with a SHA-256 hash. Parsing, modelling and
+the dashboard described below are planned (Stages 1-3) and not yet built. See
+[`docs/PROGRESS.md`](docs/PROGRESS.md), [`docs/adr/`](docs/adr/) and
+[`docs/lessons.md`](docs/lessons.md).
+
 ---
 
 ## Why This Exists

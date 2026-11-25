@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "konis"
+version = "0.1.0"
+description = "Provenance-first environmental surveillance archive for the 2026 Iowa Army Ammunition Plant lead azide detonation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+konis = "konis.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/konis"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: hits live endpoints; not run by default"]
+addopts = "-m 'not network'"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

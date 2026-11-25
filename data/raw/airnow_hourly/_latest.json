@@ -1,0 +1,32 @@
+{
+  "2026112518": {
+    "change_sha256": "88b00dd7e134ae22a74ffb2335159b8838a14d2d9b507982eba02e9e70ba3c6e",
+    "fetched_at_utc": "2026-11-25T22:52:17.350705+00:00",
+    "file": "airnow_hourly/2026-11-25/2026112518__20261125T225217Z__88b00dd7e134.dat",
+    "sha256": "88b00dd7e134ae22a74ffb2335159b8838a14d2d9b507982eba02e9e70ba3c6e"
+  },
+  "2026112519": {
+    "change_sha256": "c5cf242e506868ccaacb7bde67eede222992913c4dbc8062b8eecf9f0c7e7326",
+    "fetched_at_utc": "2026-11-25T22:52:17.350705+00:00",
+    "file": "airnow_hourly/2026-11-25/2026112519__20261125T225217Z__c5cf242e5068.dat",
+    "sha256": "c5cf242e506868ccaacb7bde67eede222992913c4dbc8062b8eecf9f0c7e7326"
+  },
+  "2026112520": {
+    "change_sha256": "04f8ee9225248e8c56d084a9b1b03a18058e5e5d0f6e0ec121624d6e94b00d56",
+    "fetched_at_utc": "2026-11-25T22:52:17.350705+00:00",
+    "file": "airnow_hourly/2026-11-25/2026112520__20261125T225217Z__04f8ee922524.dat",
+    "sha256": "04f8ee9225248e8c56d084a9b1b03a18058e5e5d0f6e0ec121624d6e94b00d56"
+  },
+  "2026112521": {
+    "change_sha256": "c21e4d28d28f1aec94cf845f6d6c5982d80bd19f871851fbafe4aa6ce395af81",
+    "fetched_at_utc": "2026-11-25T22:52:17.350705+00:00",
+    "file": "airnow_hourly/2026-11-25/2026112521__20261125T225217Z__c21e4d28d28f.dat",
+    "sha256": "c21e4d28d28f1aec94cf845f6d6c5982d80bd19f871851fbafe4aa6ce395af81"
+  },
+  "sites": {
+    "change_sha256": "7e1b0c0d60b041725f686ad02955d85ebdc989bea1e1446b5164632d3bbc6d3e",
+    "fetched_at_utc": "2026-11-25T22:52:17.350705+00:00",
+    "file": "airnow_hourly/2026-11-25/sites__20261125T225217Z__7e1b0c0d60b0.dat",
+    "sha256": "7e1b0c0d60b041725f686ad02955d85ebdc989bea1e1446b5164632d3bbc6d3e"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "bytes": 33678,
+  "change_sha256": "51371f9e95cc832c91ca0aeb8e9b019d04d305cab6f368143bf3576d44cd65d3",
+  "content_type": "text/html; charset=utf-8",
+  "fetched_at_utc": "2026-11-25T22:51:56.593164+00:00",
+  "file": "page__20261125T225156Z__51371f9e95cc.html",
+  "final_url": "https://www.army.mil/article/297039",
+  "key": "page",
+  "kind": "page",
+  "publisher": "U.S. Army",
+  "run_id": "local-redacted",
+  "sha256": "51371f9e95cc832c91ca0aeb8e9b019d04d305cab6f368143bf3576d44cd65d3",
+  "source_id": "army_article_297039",
+  "tier": "T1",
+  "url": "https://www.army.mil/article/297039"
+}

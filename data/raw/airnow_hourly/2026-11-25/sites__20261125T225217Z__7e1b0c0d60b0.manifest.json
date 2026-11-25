@@ -1,0 +1,22 @@
+{
+  "bbox": [
+    -93.5,
+    39.5,
+    -89.0,
+    42.0
+  ],
+  "bytes": 17025,
+  "change_sha256": "7e1b0c0d60b041725f686ad02955d85ebdc989bea1e1446b5164632d3bbc6d3e",
+  "clip": "BBOX by lat/lon",
+  "fetched_at_utc": "2026-11-25T22:52:17.350705+00:00",
+  "file": "sites__20261125T225217Z__7e1b0c0d60b0.dat",
+  "key": "sites",
+  "kind": "airnow_hourly",
+  "publisher": "EPA AirNow (preliminary, unvalidated)",
+  "run_id": "local-redacted",
+  "sha256": "7e1b0c0d60b041725f686ad02955d85ebdc989bea1e1446b5164632d3bbc6d3e",
+  "source_id": "airnow_hourly",
+  "tier": "T1",
+  "upstream_url": "https://files.airnowtech.org/airnow/2026/20261125/Monitoring_Site_Locations_V2.dat",
+  "url": "https://files.airnowtech.org/airnow"
+}

@@ -1,0 +1,16 @@
+{
+  "bytes": 55490,
+  "change_sha256": "c71a61ee8a5c4f637229837de4e73312c1f7f7813418dfd5b7e95e5dd8a9e2ef",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched_at_utc": "2026-11-25T22:51:54.817663+00:00",
+  "file": "page__20261125T225154Z__840edf610042.html",
+  "final_url": "https://www.epa.gov/newsreleases/initial-air-monitoring-shows-zero-detection-airborne-lead-following-controlled",
+  "key": "page",
+  "kind": "page",
+  "publisher": "EPA",
+  "run_id": "local-redacted",
+  "sha256": "840edf610042ab506b045510d917b48d49ef1d16eab79ff9df9c17eabe1a1878",
+  "source_id": "epa_news_initial_air",
+  "tier": "T1",
+  "url": "https://www.epa.gov/newsreleases/initial-air-monitoring-shows-zero-detection-airborne-lead-following-controlled"
+}
