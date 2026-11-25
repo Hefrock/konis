@@ -1,4 +1,16 @@
 {
+  "full": {
+    "change_sha256": "44ca7d58c4d38a2c8e9fa62dfbd81e16336e5bbf3e737efefe2cbbb5820ad7ca",
+    "fetched_at_utc": "2026-11-25T23:06:34.297697+00:00",
+    "file": "epa_air_stations/2026-11-25/full__20261125T230634Z__44ca7d58c4d3.json",
+    "sha256": "44ca7d58c4d38a2c8e9fa62dfbd81e16336e5bbf3e737efefe2cbbb5820ad7ca",
+    "state": {
+      "count": 43,
+      "data_last_edit_ms": 1795577250727,
+      "day": "2026-11-25",
+      "max_oid": 43
+    }
+  },
   "layer": {
     "change_sha256": "dc1ba521f3952492cffe7db4cba49281caa7e0dcec4df8d9426b15356e453804",
     "fetched_at_utc": "2026-11-25T22:51:23.961200+00:00",

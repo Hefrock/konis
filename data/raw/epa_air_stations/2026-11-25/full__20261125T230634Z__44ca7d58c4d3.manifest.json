@@ -1,0 +1,29 @@
+{
+  "bytes": 10421,
+  "change_sha256": "44ca7d58c4d38a2c8e9fa62dfbd81e16336e5bbf3e737efefe2cbbb5820ad7ca",
+  "data_last_edit_ms": 1795577250727,
+  "feature_count_total": 43,
+  "fetched_at_utc": "2026-11-25T23:06:34.297697+00:00",
+  "fields": [
+    "OBJECTID",
+    "Station_ID",
+    "Instrument_Type",
+    "GlobalID"
+  ],
+  "file": "full__20261125T230634Z__44ca7d58c4d3.json",
+  "key": "full",
+  "kind": "arcgis_layer",
+  "mode": "full",
+  "publisher": "EPA Region 7",
+  "run_id": "gh-45718695067-1",
+  "sha256": "44ca7d58c4d38a2c8e9fa62dfbd81e16336e5bbf3e737efefe2cbbb5820ad7ca",
+  "source_id": "epa_air_stations",
+  "state": {
+    "count": 43,
+    "data_last_edit_ms": 1795577250727,
+    "day": "2026-11-25",
+    "max_oid": 43
+  },
+  "tier": "T1",
+  "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Air_Sampling_and_Monitoring_Location/FeatureServer/0"
+}
