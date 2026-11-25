@@ -105,7 +105,7 @@ def test_arcgis_pages_until_done():
         (f"{u}/query", 2, None): FakeResp(js={"features": [{}]}),
     })
     ((_, _body, extra),) = fetch_arcgis_layer(http, Source("x", "arcgis_layer", u), T)
-    assert extra["feature_count"] == 3
+    assert extra["feature_count_total"] == 3
 
 
 def test_failures_are_logged_and_summarized(tmp_path, monkeypatch):
@@ -132,3 +132,50 @@ def test_tokens_redacted_before_storage(tmp_path):
     man = json.loads(path.with_name(path.name.replace(".html", ".manifest.json")).read_text())
     assert man["redactions"][0]["kind"] == "mapbox_token"
     assert "upstream_sha256_before_redaction" in man
+
+
+def _layer_http(features, edit_ms=1):
+    u = "L"
+    meta = {"fields": [{"name": "objectid", "type": "esriFieldTypeOID"}],
+            "maxRecordCount": 1000, "editingInfo": {"dataLastEditDate": edit_ms}}
+    return FakeHttp({
+        (u, None, None): FakeResp(js=meta),
+        (f"{u}/query", None, "true"): FakeResp(js={"count": len(features)}),
+        (f"{u}/query", 0, None): FakeResp(js={"features": features}),
+    })
+
+
+def _feats(*oids, v=0):
+    return [{"attributes": {"objectid": o, "v": v}} for o in oids]
+
+
+def _save_all(st, items, t):
+    for key, body, extra in items:
+        state = extra.pop("_state", None)
+        st.save(source_id="x", key=key, ext="json", content=body, fetched_at=t,
+                manifest=extra, state=state)
+
+
+def test_arcgis_full_then_delta_then_full_on_edit_and_new_day(tmp_path):
+    st, src = RawStore(tmp_path), Source("x", "arcgis_layer", "L")
+    items = fetch_arcgis_layer(_layer_http(_feats(1, 2), 1), src, T, store=st)
+    assert items[0][0] == "full"
+    _save_all(st, items, T)
+
+    items = fetch_arcgis_layer(_layer_http(_feats(1, 2, 3), 2), src, T, store=st)
+    assert items[0][0] == "delta" and json.loads(items[0][1])["features"] == _feats(3)
+    _save_all(st, items, T.replace(minute=30))
+
+    # edited in place (no new rows, edit time moved): full snapshot
+    items = fetch_arcgis_layer(_layer_http(_feats(1, 2, 3, v=9), 3), src, T, store=st)
+    assert items[0][0] == "full"
+    _save_all(st, items, T.replace(minute=45))
+
+    # a row disappeared: full snapshot
+    items = fetch_arcgis_layer(_layer_http(_feats(1, 3), 3), src, T, store=st)
+    assert items[0][0] == "full"
+
+    # next UTC day with no change: full requested, content identical so not stored again
+    t2 = T.replace(day=26)
+    items = fetch_arcgis_layer(_layer_http(_feats(1, 2, 3, v=9), 3), src, t2, store=st)
+    assert items[0][0] == "full"

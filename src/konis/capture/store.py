@@ -82,7 +82,8 @@ class RawStore:
 
     def save(self, *, source_id: str, key: str, ext: str, content: bytes,
              fetched_at: datetime, manifest: dict,
-             change_bytes: bytes | None = None) -> tuple[bool, str, Path | None]:
+             change_bytes: bytes | None = None,
+             state: dict | None = None) -> tuple[bool, str, Path | None]:
         """Store content if it changed since the last stored version for this key.
 
         Change is judged on `change_bytes` (a normalized form with volatile tokens removed)
@@ -96,8 +97,12 @@ class RawStore:
         digest = sha256(content)
         change = sha256(change_bytes) if change_bytes is not None else digest
         latest = self.latest(source_id)
-        if latest.get(_safe(key), {}).get("change_sha256", latest.get(_safe(key), {}).get(
-                "sha256")) == change:
+        prev = latest.get(_safe(key), {})
+        if prev.get("change_sha256", prev.get("sha256")) == change:
+            if state is not None and prev.get("state") != state:
+                prev["state"] = state  # e.g. a new UTC day: keep incremental state current
+                self._latest_file(source_id).write_text(
+                    json.dumps(latest, indent=2, sort_keys=True) + "\n")
             return False, digest, None
         day = fetched_at.strftime("%Y-%m-%d")
         stamp = fetched_at.strftime("%Y%m%dT%H%M%SZ")
@@ -115,8 +120,14 @@ class RawStore:
             man["upstream_sha256_before_redaction"] = original_sha
             man["redactions"] = redactions
         (d / f"{stem}.manifest.json").write_text(json.dumps(man, indent=2, sort_keys=True) + "\n")
-        latest[_safe(key)] = {"sha256": digest, "change_sha256": change, "file": str(path.relative_to(self.raw)),
+        latest[_safe(key)] = {"sha256": digest, "change_sha256": change,
+                              "file": str(path.relative_to(self.raw)),
                               "fetched_at_utc": fetched_at.isoformat()}
+        if state is not None:
+            man["state"] = state
+            latest[_safe(key)]["state"] = state
+            (d / f"{stem}.manifest.json").write_text(
+                json.dumps(man, indent=2, sort_keys=True) + "\n")
         self._latest_file(source_id).write_text(
             json.dumps(latest, indent=2, sort_keys=True) + "\n")
         return True, digest, path

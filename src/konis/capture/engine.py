@@ -118,7 +118,12 @@ def _arcgis_json(http: Http, url: str, params: dict) -> dict:
     return d
 
 
-def fetch_arcgis_layer(http: Http, src: Source, now: datetime):
+def fetch_arcgis_layer(http: Http, src: Source, now: datetime, store: RawStore | None = None):
+    """Full snapshot once per UTC day; between them, only features with a new object id.
+
+    A full snapshot is also taken whenever the layer was edited without adding rows, or lost
+    rows, so in-place revisions and deletions are never missed (ADR 0005).
+    """
     meta = _arcgis_json(http, src.url, {})
     fields = [f["name"] for f in meta.get("fields", [])]
     if not fields:
@@ -139,11 +144,35 @@ def fetch_arcgis_layer(http: Http, src: Source, now: datetime):
             break
     if count is not None and len(feats) != count:
         raise CaptureError("error", f"paged {len(feats)} features but count says {count}", 200)
-    doc = {"layer_url": src.url, "count": count, "fields": meta.get("fields"),
-           "editingInfo": meta.get("editingInfo"), "features": feats}
-    return [("layer", canonical_json(doc),
-             {"feature_count": len(feats), "fields": fields,
-              "data_last_edit_ms": (meta.get("editingInfo") or {}).get("dataLastEditDate")})]
+    edit_ms = (meta.get("editingInfo") or {}).get("dataLastEditDate")
+    oids = [f.get("attributes", {}).get(oid) for f in feats]
+    max_oid = max((o for o in oids if isinstance(o, int)), default=None)
+    state = {"max_oid": max_oid, "count": len(feats), "data_last_edit_ms": edit_ms,
+             "day": now.strftime("%Y-%m-%d")}
+    base = {"feature_count_total": len(feats), "fields": fields, "data_last_edit_ms": edit_ms,
+            "_state": state}
+
+    latest = store.latest(src.source_id) if store else {}
+    prev = max((latest.get(k, {}).get("state") or {} for k in ("full", "delta")),
+               key=lambda st: st.get("max_oid") or -1, default={})
+    full_day = (latest.get("full", {}).get("state") or {}).get("day")
+    prev_max, prev_count = prev.get("max_oid"), prev.get("count")
+    new = [f for f, o in zip(feats, oids, strict=True)
+           if isinstance(o, int) and prev_max is not None and o > prev_max]
+    need_full = (
+        full_day != state["day"] or prev_max is None or prev_count is None
+        or len(feats) != prev_count + len(new)          # rows removed or re-keyed
+        or (not new and edit_ms != prev.get("data_last_edit_ms"))  # edited in place
+    )
+    if need_full:
+        doc = {"layer_url": src.url, "mode": "full", "count": count,
+               "fields": meta.get("fields"), "editingInfo": meta.get("editingInfo"),
+               "features": feats}
+        return [("full", canonical_json(doc), {**base, "mode": "full"})]
+    doc = {"layer_url": src.url, "mode": "delta", "after_oid": prev_max, "count": count,
+           "editingInfo": meta.get("editingInfo"), "features": new}
+    return [("delta", canonical_json(doc),
+             {**base, "mode": "delta", "after_oid": prev_max, "feature_count": len(new)})]
 
 
 def fetch_arcgis_item(http: Http, src: Source, now: datetime):
@@ -168,7 +197,9 @@ def fetch_json(http: Http, src: Source, now: datetime):
 def fetch_iem_asos(http: Http, src: Source, now: datetime):
     out = []
     today = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    for day in (today - timedelta(days=1), today):
+    # Completed UTC days only (yesterday and the day before, for late reports); live
+    # weather comes from METAR. Re-storing today's growing file every run would bloat git.
+    for day in (today - timedelta(days=2), today - timedelta(days=1)):
         url, params = iem_asos_url(day)
         body = http.get(url, params=params).content
         lines = body.decode("utf-8", "replace").strip().splitlines()
@@ -261,7 +292,9 @@ def run_capture(run_id: str, store: RawStore | None = None, only: list[str] | No
         t = now or datetime.now(UTC)
         stamp = t.isoformat()
         try:
-            items = FETCHERS[src.kind](http, src, t)
+            fn = FETCHERS[src.kind]
+            items = (fn(http, src, t, store=store) if src.kind == "arcgis_layer"
+                     else fn(http, src, t))
         except CaptureError as e:
             o = Outcome(run_id, src.source_id, "*", src.url, stamp, e.status, e.http_status,
                         detail=e.detail, tier=src.tier)
@@ -276,11 +309,12 @@ def run_capture(run_id: str, store: RawStore | None = None, only: list[str] | No
             continue
         for key, body, extra in items:
             change_bytes = extra.pop("_change_bytes", None)
+            state = extra.pop("_state", None)
             man = {"url": src.url, "publisher": src.publisher, "tier": src.tier,
                    "kind": src.kind, "run_id": run_id, **extra}
             stored, digest, path = store.save(source_id=src.source_id, key=key, ext=src.ext,
                                               content=body, fetched_at=t, manifest=man,
-                                              change_bytes=change_bytes)
+                                              change_bytes=change_bytes, state=state)
             o = Outcome(run_id, src.source_id, key, extra.get("upstream_url", src.url), stamp,
                         "stored" if stored else "unchanged", 200, len(body), digest,
                         str(path) if path else None, tier=src.tier)
