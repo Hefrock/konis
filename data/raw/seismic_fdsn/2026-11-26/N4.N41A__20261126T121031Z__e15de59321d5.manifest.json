@@ -1,0 +1,21 @@
+{
+  "bytes": 1298944,
+  "change_sha256": "e15de59321d5b3d48358b97c17d2d8c17dedac743f22510a43e48a3978a8681a",
+  "channels": "HHZ,BDF",
+  "endtime": "2026-11-25T15:20:00",
+  "fetched_at_utc": "2026-11-26T12:10:31.187237+00:00",
+  "file": "N4.N41A__20261126T121031Z__e15de59321d5.mseed",
+  "key": "N4.N41A",
+  "network": "N4",
+  "publisher": "EarthScope FDSN",
+  "sha256": "e15de59321d5b3d48358b97c17d2d8c17dedac743f22510a43e48a3978a8681a",
+  "source_id": "seismic_fdsn",
+  "starttime": "2026-11-25T13:50:00",
+  "station": "N41A",
+  "tier": "T1",
+  "traces": [
+    "N4.N41A.00.HHZ | 2026-11-25T13:50:00.000000Z - 2026-11-25T15:19:59.990000Z | 100.0 Hz, 540000 samples",
+    "N4.N41A.32.BDF | 2026-11-25T13:50:00.021000Z - 2026-11-25T15:19:59.996000Z | 40.0 Hz, 216000 samples"
+  ],
+  "url": "https://service.earthscope.org/fdsnws/dataselect/1/query"
+}
