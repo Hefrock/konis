@@ -1,6 +1,7 @@
 # ADR 0012: Xact readings by distance along the south-west transect
 
-Status: PROPOSED (draft 26 Nov 2026), for owner review. Nothing in this ADR has been run.
+Status: ACCEPTED by the owner at 2026-11-26T13:20Z, before any part of it was run.
+Part B uses only Xact readings with `observed_at_utc` after 2026-11-26T13:20Z.
 
 ## Why, and what has already been seen
 ADR 0009's downwind comparison was undefined: the four EPA Xact stations lie on one line
@@ -24,7 +25,7 @@ appears. A confirmatory analysis can only use data collected after this ADR is a
   "detected"; the pre-event baseline is 1.5-2 hours at each station.
 
 ## Part B: confirmatory, prospective (resuspension episodes)
-Applies only to Xact data observed after this ADR's acceptance date, and only if EPA keeps
+Applies only to Xact readings observed after 2026-11-26T13:20Z (acceptance), and only if EPA keeps
 publishing Xact results (the layer's latest reading at drafting was 02:40 UTC 26 Nov).
 
 - **Episode:** a period meeting ADR 0003's resuspension conditions, measured at KBRL from
