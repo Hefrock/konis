@@ -1,14 +1,14 @@
 {
   "delta": {
-    "change_sha256": "b27af31ab02751c577ef395a5997160afbf16a59df386bcd7accaee18095fc67",
-    "fetched_at_utc": "2026-11-26T16:02:29.964865+00:00",
-    "file": "epa_xact_metals/2026-11-26/delta__20261126T160229Z__b27af31ab027.json",
-    "sha256": "b27af31ab02751c577ef395a5997160afbf16a59df386bcd7accaee18095fc67",
+    "change_sha256": "1852c280315bd34ba3b29b6d1a9deb2ecc7ae5b95da79a44ffda134ba937d68f",
+    "fetched_at_utc": "2026-11-26T17:02:52.087296+00:00",
+    "file": "epa_xact_metals/2026-11-26/delta__20261126T170252Z__1852c280315b.json",
+    "sha256": "1852c280315bd34ba3b29b6d1a9deb2ecc7ae5b95da79a44ffda134ba937d68f",
     "state": {
-      "count": 385,
-      "data_last_edit_ms": 1795707563554,
+      "count": 390,
+      "data_last_edit_ms": 1795712456874,
       "day": "2026-11-26",
-      "max_oid": 620
+      "max_oid": 625
     }
   },
   "full": {
