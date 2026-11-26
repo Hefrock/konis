@@ -6,3 +6,4 @@ __pycache__/
 *.grib2
 *.mseed
 .env
+data/_external_staging/

@@ -30,3 +30,20 @@ The project brief gives 09:00 CST (15:00 UTC); some same-day news reports say "a
 ET" (08:00 CST). Small positive Xact readings appear at 08:40 and 08:50 CST, which are before
 the blast under one time and after it under the other. The event time is now an open question
 to confirm from a T1 source (Army or EPA), not a constant to assume.
+
+### 6. No monitor where the plume was forecast to go (26 Nov 2026)
+The Army forecast drift to the southwest into Missouri. The regulatory PM monitors reporting in
+the study box are all in Iowa and Illinois, the nearest 65 km away, and none lies southwest. A
+network can be "working" and still be unable to answer the question being asked. Absence of a
+signal at these monitors says nothing about places they do not cover (ADR 0007).
+
+### 7. A file that grows after it is published (26 Nov 2026)
+AirNow posts each hourly file in stages; the first copy we saw held no rows for the study box.
+Treating that copy as final would have recorded every monitor as missing for that hour. Early
+copies are kept, and a later, fuller copy adds rows rather than "revising" them.
+
+### 8. The documents behind the page (26 Nov 2026)
+The pages konis archived linked to the sampling plan (QAPP), the permit and its appendices.
+Two of the most important were 78 MB and 191 MB: too big for the repository, so a size guard
+would have quietly dropped exactly the files that say how lead was to be measured. Large files
+now go to release assets with their hash kept in the repository (ADR 0008).

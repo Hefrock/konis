@@ -31,5 +31,7 @@ def check_bot_paths(base: str, head: str = "HEAD") -> list[str]:
 
 
 def check_sizes(root: Path = Path("data")) -> list[str]:
+    # data/_external_staging is gitignored: large documents bound for release assets.
     return [f"{p} is {p.stat().st_size} bytes" for p in root.rglob("*")
-            if p.is_file() and p.stat().st_size > MAX_FILE_BYTES]
+            if p.is_file() and "_external_staging" not in p.parts
+            and p.stat().st_size > MAX_FILE_BYTES]

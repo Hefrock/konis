@@ -40,7 +40,8 @@ class Http:
         self.min_gap = min_gap
         self._last: dict[str, float] = {}
 
-    def get(self, url: str, params: dict | None = None, allow_404: bool = False):
+    def get(self, url: str, params: dict | None = None, allow_404: bool = False,
+            headers: dict | None = None):
         host = urlparse(url).netloc
         for attempt in range(3):
             wait = self.min_gap - (time.monotonic() - self._last.get(host, -1e9))
@@ -48,13 +49,14 @@ class Http:
                 time.sleep(wait)
             self._last[host] = time.monotonic()
             try:
-                r = self.s.get(url, params=params, timeout=config.HTTP_TIMEOUT)
+                r = self.s.get(url, params=params, headers=headers,
+                               timeout=config.HTTP_TIMEOUT)
             except requests.RequestException as e:
                 if attempt == 2:
                     raise CaptureError("error", f"{type(e).__name__}: {e}") from e
                 time.sleep(10 * (attempt + 1))
                 continue
-            if r.status_code == 404 and allow_404:
+            if (r.status_code == 404 and allow_404) or (r.status_code == 304 and headers):
                 return r
             if r.status_code in (401, 403, 451):
                 raise CaptureError("blocked", f"HTTP {r.status_code}", r.status_code)
@@ -272,6 +274,13 @@ def fetch_airnow_hourly(http: Http, src: Source, now: datetime):
             "rows": len(rows), "valid_hour_utc": t.isoformat()}))
     if got == 0:
         raise CaptureError("empty", "none of the last 4 hourly files were available", 404)
+    # Files are posted in stages, so an early version can hold no study-box rows. But a
+    # full-size national file with zero study-box rows means the format or site ids changed.
+    hourly = [e for _, _, e in out if "valid_hour_utc" in e]
+    if all(e["rows"] == 0 for e in hourly) and any(e["upstream_bytes"] > 300_000
+                                                   for e in hourly):
+        raise CaptureError("empty", "full-size hourly files but no study-box rows "
+                           "(format or site-id change?)", 200)
     return out
 
 
@@ -330,6 +339,15 @@ def run_capture(run_id: str, store: RawStore | None = None, only: list[str] | No
             o = Outcome(run_id, src.source_id, key, extra.get("upstream_url", src.url), stamp,
                         "stored" if stored else "unchanged", 200, len(body), digest,
                         str(path) if path else None, tier=src.tier)
+            store.log(o)
+            outcomes.append(o)
+    if not only or "linked_docs" in only:
+        from konis.capture.harvest import run_harvest
+        try:
+            outcomes += run_harvest(http, store, run_id, now or datetime.now(UTC))
+        except Exception as e:  # noqa: BLE001 - harvester must not lose the page captures
+            o = Outcome(run_id, "linked_docs", "*", "", datetime.now(UTC).isoformat(),
+                        "error", detail=f"{type(e).__name__}: {e}")
             store.log(o)
             outcomes.append(o)
     return outcomes
