@@ -17,4 +17,5 @@ Done 26 Nov: weather_obs curated table from METAR + IEM ASOS (ADR 0010).
 Done 26 Nov: seismic/infrasound detonation-time check (ADR 0011): ~15:00:32 UTC, preliminary.
 Done 26 Nov: ADR 0009 accepted and run; primary estimate undefined (no non-downwind station),
 descriptive counts in docs/results/xact-wind-c3bca34.md.
-Next: owner decision on a distance-along-transect pre-registration (not yet written), 7-day baseline, then HRRR and seismic.
+Next: owner review of ADR 0012 (PROPOSED): transect by distance, Part A exploratory, Part B
+prospective resuspension episodes, 7-day baseline, then HRRR and seismic.
