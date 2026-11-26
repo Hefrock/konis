@@ -17,6 +17,12 @@ dev = ["pytest>=8", "ruff>=0.6"]
 [project.scripts]
 konis = "konis.cli:main"
 
+[project.optional-dependencies]
+seismic = [
+    "obspy>=1.5.2",
+    "pyproj>=3.7.2",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/konis"]
 

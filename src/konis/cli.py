@@ -71,6 +71,20 @@ def cmd_parse(a) -> int:
     return 0
 
 
+def cmd_seismic(a) -> int:
+    from konis import seismic
+    if a.action == "fetch":
+        print("stored" if seismic.fetch() else "unchanged")
+        return 0
+    df = seismic.triggers()
+    out = "data/curated/seismic_triggers.csv"
+    df.write_csv(out)
+    print("wrote", out, len(df), "rows")
+    for line in seismic.summarize(df):
+        print(line)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="konis")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -88,6 +102,9 @@ def main(argv: list[str] | None = None) -> int:
     pa = sub.add_parser("parse", help="rebuild curated tables from raw")
     pa.add_argument("--check", action="store_true", help="rebuild twice and compare")
     pa.set_defaults(fn=cmd_parse)
+    se = sub.add_parser("seismic", help="detonation-time check (needs the seismic extra)")
+    se.add_argument("action", choices=["fetch", "analyze"])
+    se.set_defaults(fn=cmd_seismic)
     a = p.parse_args(argv)
     return a.fn(a)
 
