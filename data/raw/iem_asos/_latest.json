@@ -12,9 +12,9 @@
     "sha256": "d33198bed30bc7bd145def09564ce2ae4809715433c3202e0509c305e82055b1"
   },
   "2026-11-25": {
-    "change_sha256": "2a46438f3381cb7bfceb60a1495ce2240fe3cd7b635538caa7fae266422c19ea",
-    "fetched_at_utc": "2026-11-25T22:52:37.383210+00:00",
-    "file": "iem_asos/2026-11-25/2026-11-25__20261125T225237Z__2a46438f3381.csv",
-    "sha256": "2a46438f3381cb7bfceb60a1495ce2240fe3cd7b635538caa7fae266422c19ea"
+    "change_sha256": "c1a1f807bd8e6f5325d389ffbfa0ad88164ccdcfea7ecef7174c0fb4260b97da",
+    "fetched_at_utc": "2026-11-26T01:06:31.415016+00:00",
+    "file": "iem_asos/2026-11-26/2026-11-25__20261126T010631Z__c1a1f807bd8e.csv",
+    "sha256": "c1a1f807bd8e6f5325d389ffbfa0ad88164ccdcfea7ecef7174c0fb4260b97da"
   }
 }
