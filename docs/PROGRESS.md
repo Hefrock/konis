@@ -7,7 +7,7 @@ Status: running on main (:07/:37, watchdog :52). First GitHub run 23:07 UTC: 17/
 Done: uv + polars with uv.lock; `konis parse` builds `data/curated/xact_lead.csv` (ADR 0006)
 and `data/curated/ingestion_health.csv`; deterministic rebuild checked in CI; runs after each
 capture. Illinois EPA PDFs added as sources.
-Evidence: 42 offline tests; 326 Xact rows from 4 stations at first build.
+Evidence: 47 offline tests; 326 Xact rows from 4 stations at first build.
 Open: detonation time (BLOCKERS); EPA detection limit (draft request).
 Done 26 Nov: AirNow curated table (ADR 0007), great-circle geometry with tests; capture check
 for full-size files with no study-box rows.
@@ -15,4 +15,6 @@ Done 26 Nov: linked-document harvester with release-asset storage for large file
 ADR 0009 pre-registered Xact x wind analysis drafted (PROPOSED).
 Done 26 Nov: weather_obs curated table from METAR + IEM ASOS (ADR 0010).
 Done 26 Nov: seismic/infrasound detonation-time check (ADR 0011): ~15:00:32 UTC, preliminary.
-Next: owner decision on ADR 0009; then the pre-registered Xact x wind analysis, 7-day baseline, then HRRR and seismic.
+Done 26 Nov: ADR 0009 accepted and run; primary estimate undefined (no non-downwind station),
+descriptive counts in docs/results/xact-wind-c3bca34.md.
+Next: owner decision on a distance-along-transect pre-registration (not yet written), 7-day baseline, then HRRR and seismic.
