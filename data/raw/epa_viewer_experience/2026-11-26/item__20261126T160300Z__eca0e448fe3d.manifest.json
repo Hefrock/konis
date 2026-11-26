@@ -1,0 +1,17 @@
+{
+  "bytes": 33157,
+  "change_sha256": "eca0e448fe3d62b7b2b4e3cd897ffc496700bb0e06e35cac7c77c1750fbdbb45",
+  "fetched_at_utc": "2026-11-26T16:03:00.180600+00:00",
+  "file": "item__20261126T160300Z__eca0e448fe3d.json",
+  "key": "item",
+  "kind": "arcgis_item",
+  "modified_ms": 1795708618000,
+  "owner": "Region7.Start_EPAEXT",
+  "publisher": "EPA Region 7",
+  "run_id": "gh-45854934045-1",
+  "sha256": "eca0e448fe3d62b7b2b4e3cd897ffc496700bb0e06e35cac7c77c1750fbdbb45",
+  "source_id": "epa_viewer_experience",
+  "tier": "T1",
+  "title": "Iowa Army Ammunition Plant  Response Data Viewer",
+  "url": "https://www.arcgis.com/sharing/rest/content/items/1ddcf8b9d8314971b00dac8893ae9cd6"
+}
