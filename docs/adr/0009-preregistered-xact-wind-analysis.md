@@ -19,8 +19,9 @@ downwind of the detonation site than when it was not?
 - **Origin:** the midpoint between the two ECMs as given in the QAPP (UTM 646,000 E,
   4,519,000 N, zone 15N), converted to latitude/longitude once and stored in `config.py`.
   (IAAAP's nominal coordinate in the project brief is not the detonation point.)
-- **Detonation time T0:** from a T1 source (Army or EPA) or regional seismic/infrasound
-  arrival times; open until confirmed (docs/BLOCKERS.md).
+- **Detonation time T0:** from a T1 source (Army or EPA) if published; otherwise the
+  seismic/infrasound estimate of ADR 0011 (15:00:32 UTC ± 10 s). The source of T0 is stated
+  with every result.
 - **Event window:** T0 to T0 + 8 h. Pre-event window: readings before T0 on the same day.
 - **Wind:** KBRL ASOS observations (IEM archive; the same station EPA used in QAPP Worksheet 17).
   Each Xact reading is matched to the latest KBRL observation at or before its timestamp,

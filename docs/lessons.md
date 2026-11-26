@@ -47,3 +47,11 @@ The pages konis archived linked to the sampling plan (QAPP), the permit and its 
 Two of the most important were 78 MB and 191 MB: too big for the repository, so a size guard
 would have quietly dropped exactly the files that say how lead was to be measured. Large files
 now go to release assets with their hash kept in the repository (ADR 0008).
+
+### 9. Timing a blast with a microphone 37 km away (26 Nov 2026)
+News reports and the project brief disagreed on the detonation time by an hour. A public
+seismometer and infrasound sensor 37 km away settled it without asking anyone: ground motion at
+15:00:38 UTC, then an air pressure wave 104 s later, which is the speed of sound at the
+temperature the nearest airport reported. One station is weak evidence on its own; the check
+that made it convincing was physics, not the pick: the two arrivals had to agree with the speed
+of sound, and they did (ADR 0011).
