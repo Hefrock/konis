@@ -272,6 +272,13 @@ def fetch_airnow_hourly(http: Http, src: Source, now: datetime):
             "rows": len(rows), "valid_hour_utc": t.isoformat()}))
     if got == 0:
         raise CaptureError("empty", "none of the last 4 hourly files were available", 404)
+    # Files are posted in stages, so an early version can hold no study-box rows. But a
+    # full-size national file with zero study-box rows means the format or site ids changed.
+    hourly = [e for _, _, e in out if "valid_hour_utc" in e]
+    if all(e["rows"] == 0 for e in hourly) and any(e["upstream_bytes"] > 300_000
+                                                   for e in hourly):
+        raise CaptureError("empty", "full-size hourly files but no study-box rows "
+                           "(format or site-id change?)", 200)
     return out
 
 

@@ -52,14 +52,17 @@ def cmd_guard(a) -> int:
 
 def cmd_parse(a) -> int:
     """Rebuild every curated table from raw and logs (K3)."""
-    from konis.parse import health, xact
+    from konis.parse import airnow, health, xact
     x = xact.build()
     print("wrote", xact.write(x), len(x), "rows")
     print(xact.summary(x))
+    n = airnow.build()
+    print("wrote", airnow.write(n), len(n), "rows")
     h = health.build()
     print("wrote", health.write(h), len(h), "rows")
     if a.check:  # determinism: a second rebuild must be identical
-        if not (xact.build().equals(x) and health.build().equals(h)):
+        if not (xact.build().equals(x) and airnow.build().equals(n)
+                and health.build().equals(h)):
             print("REBUILD NOT DETERMINISTIC")
             return 1
         print("rebuild deterministic")
