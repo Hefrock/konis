@@ -49,3 +49,19 @@ publishing Xact results (the layer's latest reading at drafting was 02:40 UTC 26
 ## Not covered
 - Regulatory PM monitors (ADR 0007) and PurpleAir: optical PM is not lead (K10).
 - Soil, wipe and filter results: analysed when EPA publishes them, under their own ADR.
+
+## Clarifications made while implementing (26 Nov 2026, before any Part B data existed)
+Recorded here because the text above did not fix them. Each takes the stricter reading.
+1. "No measurable precipitation": no KBRL report with `precip_in` > 0; a trace is not
+   measurable. A UTC day counts only if it has at least 20 KBRL reports; a day with fewer
+   is "incomplete" and breaks a dry streak.
+2. The dry streak is the three complete UTC days before the gust's day, plus the gust's day up
+   to the gust. A gust exactly 6.7 m/s does not qualify (> 6.7). Episodes do not overlap.
+3. Part B baselines, like episode readings, use only Xact readings after 2026-11-26T13:20Z.
+4. An episode is evaluated only when both KBRL and Xact data extend past its end.
+5. Wind class: "toward transect" if more than half of non-calm, non-variable KBRL reports in
+   the episode blow within ±45° of 233°.
+
+Implementation: `konis analyze transect-a` (Part A, docs/results/) and
+`konis analyze transect-b` (Part B, run after each capture; outputs in data/curated/; a GitHub
+Issue labelled `resuspension-episode` opens for each newly completed episode).

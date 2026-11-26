@@ -80,11 +80,32 @@ jobs:
           git add data/curated
           git diff --cached --quiet || git commit -q -m "data: curate ${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
 
+      # ADR 0012 Part B: detect completed resuspension episodes; alert on new ones.
+      - name: Transect episodes (ADR 0012 Part B)
+        continue-on-error: true
+        run: |
+          uv run --frozen konis analyze transect-b --new-out "$RUNNER_TEMP/new_episodes.txt"
+          git add data/curated
+          git diff --cached --quiet || git commit -q -m "data: transect episodes ${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
       - name: Guards before push
         run: uv run --frozen konis guard --bot --base "$BASE_SHA"
 
       - name: Push with rebase retry
         run: .github/scripts/push-with-retry.sh "${GITHUB_REF_NAME}"
+
+      - name: Alert on newly completed episodes
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          f="$RUNNER_TEMP/new_episodes.txt"
+          [ -s "$f" ] || { echo "no new episodes"; exit 0; }
+          gh label create resuspension-episode --color 0E8A16 --force >/dev/null || true
+          for ep in $(cat "$f"); do
+            gh issue create --title "ADR 0012 episode completed: $ep" --label resuspension-episode \
+              --body "A resuspension episode defined by ADR 0012 Part B has completed. Results: data/curated/transect_partB.md (run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}). Report every episode, including ones with no change."
+          done
 
       - name: Alerts (open / update / close capture-failure issues)
         if: always()
