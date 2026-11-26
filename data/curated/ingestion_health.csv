@@ -18,24 +18,24 @@ date_utc,source_id,runs,runs_ok,runs_failed,stored,unchanged,empty,error,blocked
 2026-11-25,iowa_hhs_lead,2,2,0,1,1,0,0,0,,health/1
 2026-11-25,iowa_hsemd_resources,2,2,0,1,1,0,0,0,,health/1
 2026-11-25,metar_awc,2,2,0,2,0,0,0,0,,health/1
-2026-11-26,airnow_hourly,13,13,0,29,36,0,0,0,,health/1
-2026-11-26,army_article_297039,13,8,5,0,8,0,5,0,HTTP 404,health/1
-2026-11-26,army_article_297076,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,army_article_297078,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,army_article_297079,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,army_article_297080,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,epa_air_stations,13,13,0,1,12,0,0,0,,health/1
-2026-11-26,epa_news_initial_air,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,epa_osc_documents,12,12,0,1,11,0,0,0,,health/1
-2026-11-26,epa_osc_site,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,epa_viewer_experience,13,13,0,2,11,0,0,0,,health/1
-2026-11-26,epa_viewer_webmap,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,epa_xact_metals,13,12,1,7,5,0,1,0,paged 367 features but count says 366,health/1
-2026-11-26,iem_asos,13,13,0,1,25,0,0,0,,health/1
-2026-11-26,iepa_pdf_77827,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,iepa_pdf_78382,13,13,0,0,13,0,0,0,,health/1
-2026-11-26,iepa_updates,13,13,0,7,6,0,0,0,,health/1
-2026-11-26,iowa_hhs_lead,13,13,0,1,12,0,0,0,,health/1
-2026-11-26,iowa_hsemd_resources,13,13,0,1,12,0,0,0,,health/1
+2026-11-26,airnow_hourly,14,14,0,31,39,0,0,0,,health/1
+2026-11-26,army_article_297039,14,8,6,0,8,0,6,0,HTTP 404,health/1
+2026-11-26,army_article_297076,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,army_article_297078,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,army_article_297079,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,army_article_297080,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,epa_air_stations,14,14,0,1,13,0,0,0,,health/1
+2026-11-26,epa_news_initial_air,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,epa_osc_documents,13,13,0,1,12,0,0,0,,health/1
+2026-11-26,epa_osc_site,14,14,0,1,13,0,0,0,,health/1
+2026-11-26,epa_viewer_experience,14,14,0,2,12,0,0,0,,health/1
+2026-11-26,epa_viewer_webmap,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,epa_xact_metals,14,13,1,8,5,0,1,0,paged 367 features but count says 366,health/1
+2026-11-26,iem_asos,14,14,0,1,27,0,0,0,,health/1
+2026-11-26,iepa_pdf_77827,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,iepa_pdf_78382,14,14,0,0,14,0,0,0,,health/1
+2026-11-26,iepa_updates,14,14,0,8,6,0,0,0,,health/1
+2026-11-26,iowa_hhs_lead,14,14,0,1,13,0,0,0,,health/1
+2026-11-26,iowa_hsemd_resources,14,14,0,1,13,0,0,0,,health/1
 2026-11-26,linked_docs,3,3,0,18,36,0,0,0,,health/1
-2026-11-26,metar_awc,13,13,0,13,0,0,0,0,,health/1
+2026-11-26,metar_awc,14,14,0,14,0,0,0,0,,health/1
