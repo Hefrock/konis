@@ -1,0 +1,35 @@
+{
+  "after_oid": 638,
+  "bytes": 298,
+  "change_sha256": "e60f2328b9842b97a733170a0efeba3f86d81d1f85bcff5ff3b79acc54b770a4",
+  "data_last_edit_ms": 1795719653500,
+  "feature_count": 0,
+  "feature_count_total": 403,
+  "fetched_at_utc": "2026-11-26T20:02:34.010024+00:00",
+  "fields": [
+    "objectid",
+    "globalid",
+    "Mon_Date_Time",
+    "Latitude",
+    "Longitude",
+    "Mon_Results",
+    "Mon_Units",
+    "Air_Station_ID"
+  ],
+  "file": "delta__20261126T200234Z__e60f2328b984.json",
+  "key": "delta",
+  "kind": "arcgis_layer",
+  "mode": "delta",
+  "publisher": "EPA Region 7",
+  "run_id": "gh-45888067303-1",
+  "sha256": "e60f2328b9842b97a733170a0efeba3f86d81d1f85bcff5ff3b79acc54b770a4",
+  "source_id": "epa_xact_metals",
+  "state": {
+    "count": 403,
+    "data_last_edit_ms": 1795719653500,
+    "day": "2026-11-26",
+    "max_oid": 638
+  },
+  "tier": "T1",
+  "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/IAAAP_Xact_Data_Public_Viewer/FeatureServer/0"
+}
