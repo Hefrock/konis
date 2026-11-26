@@ -9,9 +9,9 @@ description = "Provenance-first environmental surveillance archive for the 2026 
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
-dependencies = ["requests>=2.31"]
+dependencies = ["requests>=2.31", "polars>=1.0"]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = ["pytest>=8", "ruff>=0.6"]
 
 [project.scripts]

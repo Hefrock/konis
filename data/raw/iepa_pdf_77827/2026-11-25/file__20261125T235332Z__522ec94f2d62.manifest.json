@@ -1,0 +1,16 @@
+{
+  "bytes": 167491,
+  "change_sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-25T23:53:32.739241+00:00",
+  "file": "file__20261125T235332Z__522ec94f2d62.pdf",
+  "final_url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf",
+  "key": "file",
+  "kind": "file",
+  "publisher": "Illinois EPA",
+  "run_id": "local-stage1",
+  "sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+  "source_id": "iepa_pdf_77827",
+  "tier": "T1",
+  "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf"
+}

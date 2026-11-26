@@ -18,3 +18,15 @@ the detection limit, konis records values as published and does not call 0 "no l
 The first push was rejected because a captured state page contained a map access token that
 the state itself publishes. Archiving the web means archiving whatever it embeds. Tokens are
 now redacted before storage and the original hash is kept (ADR 0004).
+
+### 4. What the public map showed (25 Nov 2026)
+EPA's public viewer formats the Xact lead field to one decimal place. Every reading published
+on the first day was below 0.05 µg/m³, so the map showed "0.0" even where the layer held
+0.004 or 0.01. The same numbers can read as "zero" or "trace" depending on display precision.
+konis keeps both: the value as published and what the map displayed (ADR 0006).
+
+### 5. When did it happen? (25 Nov 2026)
+The project brief gives 09:00 CST (15:00 UTC); some same-day news reports say "about 9 a.m.
+ET" (08:00 CST). Small positive Xact readings appear at 08:40 and 08:50 CST, which are before
+the blast under one time and after it under the other. The event time is now an open question
+to confirm from a T1 source (Army or EPA), not a constant to assume.

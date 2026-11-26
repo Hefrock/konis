@@ -111,6 +111,17 @@ def fetch_page(http: Http, src: Source, now: datetime):
                             "final_url": r.url})]
 
 
+def fetch_file(http: Http, src: Source, now: datetime):
+    r = http.get(src.url)
+    body = r.content
+    if len(body) < src.min_bytes:
+        raise CaptureError("empty", f"only {len(body)} bytes", 200)
+    if src.ext == "pdf" and not body.startswith(b"%PDF"):
+        raise CaptureError("empty", "not a PDF (moved or replaced by an HTML page?)", 200)
+    return [("file", body, {"content_type": r.headers.get("Content-Type", ""),
+                            "final_url": r.url})]
+
+
 def _arcgis_json(http: Http, url: str, params: dict) -> dict:
     d = http.get(url, params={**params, "f": "json"}).json()
     if isinstance(d, dict) and "error" in d:
@@ -266,6 +277,7 @@ def fetch_airnow_hourly(http: Http, src: Source, now: datetime):
 
 FETCHERS = {
     "page": fetch_page,
+    "file": fetch_file,
     "arcgis_layer": fetch_arcgis_layer,
     "arcgis_item": fetch_arcgis_item,
     "json": fetch_json,

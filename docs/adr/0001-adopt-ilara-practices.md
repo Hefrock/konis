@@ -1,6 +1,6 @@
 # ADR 0001: What konis adopts from ilara
 
-Status: proposed (25 Nov 2026), awaiting owner decision on items marked "decide".
+Status: accepted (25 Nov 2026). Owner decisions on the two open items are recorded below.
 
 ilara archives disease-report dashboards; konis archives sensor telemetry and agency pages.
 Practices are adopted where the failure mode is about *collection*, adapted where it depends
@@ -21,7 +21,7 @@ on the data type, and not adopted where it is specific to case reporting.
 | Re-judge captures by what was known then (lesson 5) | adopt in Stage 1 | AirNow data are preliminary and later revised |
 | Report-date / right truncation (lesson 8) | adapt | Analogue: lab results lag 24-72 h; AirNow revisions |
 | Downward count revisions (lesson 9) | adapt | Analogue: revised or withdrawn readings kept as new rows |
-| Forecast withheld until validated (G4) | decide | Applies to the resuspension index, which is a heuristic |
+| Forecast withheld until validated (G4) | adopt | The resuspension index stays off public output until it can be checked against EPA/Army soil or air results |
 | SEIR model, seeding, ABC calibration (lessons 10-11) | not adopted | No transmission process here |
 | Case-level / line-list safeguards | not adopted | No case data; replaced by PurpleAir ToS rule (K9) |
-| uv + polars + duckdb + pydantic stack | decide | Stage 0 uses pip + requests only, to start capture today |
+| uv + polars stack | adopt (Stage 1) | Locked dependencies (`uv.lock`); duckdb/pydantic added only when needed |

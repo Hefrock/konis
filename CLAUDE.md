@@ -27,8 +27,9 @@ Unofficial, independent, provenance-first archive of public environmental data a
 
 ## Commands
 
-`pip install -e '.[dev]'`; `pytest -q`; `ruff check src tests`;
-`konis capture [--only ID ...]`; `konis guard --base <sha> [--bot]`.
+`uv sync`; `uv run pytest -q`; `uv run ruff check src tests`;
+`uv run konis capture [--only ID ...]`; `uv run konis parse [--check]` (rebuild curated);
+`uv run konis guard --base <sha> [--bot]`. Curated tables live in `data/curated/` as CSV.
 Network tests are marked `@pytest.mark.network` and skipped by default.
 
 ## Stop and ask the human when

@@ -50,6 +50,22 @@ def cmd_guard(a) -> int:
     return 1 if problems else 0
 
 
+def cmd_parse(a) -> int:
+    """Rebuild every curated table from raw and logs (K3)."""
+    from konis.parse import health, xact
+    x = xact.build()
+    print("wrote", xact.write(x), len(x), "rows")
+    print(xact.summary(x))
+    h = health.build()
+    print("wrote", health.write(h), len(h), "rows")
+    if a.check:  # determinism: a second rebuild must be identical
+        if not (xact.build().equals(x) and health.build().equals(h)):
+            print("REBUILD NOT DETERMINISTIC")
+            return 1
+        print("rebuild deterministic")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="konis")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -64,6 +80,9 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--base", required=True)
     g.add_argument("--bot", action="store_true")
     g.set_defaults(fn=cmd_guard)
+    pa = sub.add_parser("parse", help="rebuild curated tables from raw")
+    pa.add_argument("--check", action="store_true", help="rebuild twice and compare")
+    pa.set_defaults(fn=cmd_parse)
     a = p.parse_args(argv)
     return a.fn(a)
 

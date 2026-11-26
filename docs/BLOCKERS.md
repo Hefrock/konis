@@ -5,3 +5,5 @@
 | 25 Nov | AirNow API key (free: https://docs.airnowapi.org/account/request/) as repo secret AIRNOW_API_KEY | optional; Stage 0 uses keyless files | open |
 | 25 Nov | PurpleAir API key (https://develop.purpleair.com) as PURPLEAIR_API_KEY | Stage 2 PurpleAir cohorts | open |
 | 25 Nov | Scheduled workflows run only from the default branch: Stage 0 must be merged to `main` | all scheduled capture | open |
+| 25 Nov | Confirm detonation time from a T1 source (brief: 09:00 CST; some news: 9 a.m. ET = 08:00 CST) | pre/post split for Xact, DiD, seismic window | open |
+| 25 Nov | Owner to send EPA the Xact detection-limit request (docs/requests/epa-xact-detection-limit.md) | interpreting reported zeros | open |

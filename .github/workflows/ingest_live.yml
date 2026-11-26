@@ -28,12 +28,12 @@ jobs:
         with:
           fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.12"
+          enable-cache: true
 
-      - name: Install
-        run: pip install -e .
+      - name: Install (locked)
+        run: uv sync --frozen --no-dev
 
       - name: Git identity
         run: |
@@ -42,7 +42,7 @@ jobs:
           echo "BASE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Capture (raw saved first; unchanged content only logged)
-        run: konis capture --summary-out "$RUNNER_TEMP/summary.json"
+        run: uv run --frozen konis capture --summary-out "$RUNNER_TEMP/summary.json"
 
       - name: Commit raw and capture log
         run: |
@@ -53,8 +53,16 @@ jobs:
             git commit -q -m "data: capture ${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           fi
 
+      # Parsing runs after the raw commit; a failure here never reverts raw (K1).
+      - name: Rebuild curated tables
+        continue-on-error: true
+        run: |
+          uv run --frozen konis parse
+          git add data/curated
+          git diff --cached --quiet || git commit -q -m "data: curate ${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
       - name: Guards before push
-        run: konis guard --bot --base "$BASE_SHA"
+        run: uv run --frozen konis guard --bot --base "$BASE_SHA"
 
       - name: Push with rebase retry
         run: .github/scripts/push-with-retry.sh "${GITHUB_REF_NAME}"
@@ -65,7 +73,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -f "$RUNNER_TEMP/summary.json" ]; then
-            python -m konis.alerts_cli "$RUNNER_TEMP/summary.json"
+            uv run --frozen python -m konis.alerts_cli "$RUNNER_TEMP/summary.json"
           else
             gh issue create --title "capture run crashed: ${GITHUB_RUN_ID}" \
               --label capture-failure \
