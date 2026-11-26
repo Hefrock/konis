@@ -55,3 +55,13 @@ seismometer and infrasound sensor 37 km away settled it without asking anyone: g
 temperature the nearest airport reported. One station is weak evidence on its own; the check
 that made it convincing was physics, not the pick: the two arrivals had to agree with the speed
 of sound, and they did (ADR 0011).
+
+### 10. A comparison the monitors could never make (26 Nov 2026)
+The pre-registered question compared lead readings at stations downwind of the site with
+stations that were not. When the analysis ran, all four EPA monitors turned out to sit on one
+line running south-west from the site, the direction the wind blew all day. EPA had placed them
+where the plume was expected, which is sensible for monitoring, but it means every reading was
+"downwind" and there was nothing to compare against. The analysis was reported as undefined
+rather than replaced by a different comparison chosen after seeing the data. Lesson: check what
+contrast the data can support (here, station positions against the forecast wind) before
+writing the analysis plan.

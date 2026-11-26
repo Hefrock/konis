@@ -85,6 +85,22 @@ def cmd_seismic(a) -> int:
     return 0
 
 
+def cmd_analyze(a) -> int:
+    import subprocess
+    from pathlib import Path
+
+    from konis.analysis import xact_wind
+    commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], check=False, capture_output=True,
+                            text=True).stdout.strip() or "unknown"
+    text = xact_wind.report(xact_wind.run(), commit)
+    out = Path("docs/results") / f"xact-wind-{commit}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(text)
+    print(text)
+    print("wrote", out)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="konis")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -105,6 +121,9 @@ def main(argv: list[str] | None = None) -> int:
     se = sub.add_parser("seismic", help="detonation-time check (needs the seismic extra)")
     se.add_argument("action", choices=["fetch", "analyze"])
     se.set_defaults(fn=cmd_seismic)
+    an = sub.add_parser("analyze", help="pre-registered analyses (ADR 0009)")
+    an.add_argument("name", choices=["xact-wind"])
+    an.set_defaults(fn=cmd_analyze)
     a = p.parse_args(argv)
     return a.fn(a)
 

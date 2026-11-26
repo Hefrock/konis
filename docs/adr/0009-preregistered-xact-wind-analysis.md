@@ -1,8 +1,13 @@
 # ADR 0009: Pre-registered primary analysis: Xact lead readings vs. wind direction
 
-Status: PROPOSED (draft 26 Nov 2026), for owner review. Must be accepted, and the detonation
-time confirmed, before any post-event result is computed (K8). Changes after acceptance apply
-going forward and are recorded here.
+Status: ACCEPTED by the owner 26 Nov 2026, before the analysis was run. Changes after
+acceptance apply going forward and are recorded here.
+
+Outcome (26 Nov 2026, data cut c3bca34): run as specified, `konis analyze xact-wind`; see
+`docs/results/xact-wind-c3bca34.md`. The primary estimate is **not defined**: all four Xact
+stations lie 232-235° from the origin, the wind blew toward 220-230° throughout the event
+window, so every matched reading was "downwind" and there was no comparison group. Only the
+pre-specified descriptive counts are reported. No substitute comparison was run (K8).
 
 ## Why this, not the PM plume comparison
 Regulatory PM monitors cannot measure lead (K10) and none lies in the forecast plume direction
