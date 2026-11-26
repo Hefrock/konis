@@ -44,6 +44,25 @@ jobs:
       - name: Capture (raw saved first; unchanged content only logged)
         run: uv run --frozen konis capture --summary-out "$RUNNER_TEMP/summary.json"
 
+      # Documents over 9 MB are kept out of git (ADR 0008): upload them as release assets
+      # first. If an upload fails the job stops here, before any commit.
+      - name: Upload large documents as release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          shopt -s nullglob
+          files=(data/_external_staging/*)
+          if [ ${#files[@]} -eq 0 ]; then echo "no large documents"; exit 0; fi
+          gh release view docs-archive >/dev/null 2>&1 || gh release create docs-archive \
+            --title "Archived large documents" \
+            --notes "Official documents too large for git. Each asset name starts with the first 16 hex digits of its sha256; manifests are under data/raw/linked_docs/ (ADR 0008)."
+          existing=$(gh release view docs-archive --json assets -q '.assets[].name')
+          for f in "${files[@]}"; do
+            name=$(basename "$f")
+            if grep -qxF "$name" <<< "$existing"; then echo "already uploaded: $name"; continue; fi
+            gh release upload docs-archive "$f"
+          done
+
       - name: Commit raw and capture log
         run: |
           git add data/

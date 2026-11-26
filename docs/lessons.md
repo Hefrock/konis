@@ -41,3 +41,9 @@ signal at these monitors says nothing about places they do not cover (ADR 0007).
 AirNow posts each hourly file in stages; the first copy we saw held no rows for the study box.
 Treating that copy as final would have recorded every monitor as missing for that hour. Early
 copies are kept, and a later, fuller copy adds rows rather than "revising" them.
+
+### 8. The documents behind the page (26 Nov 2026)
+The pages konis archived linked to the sampling plan (QAPP), the permit and its appendices.
+Two of the most important were 78 MB and 191 MB: too big for the repository, so a size guard
+would have quietly dropped exactly the files that say how lead was to be measured. Large files
+now go to release assets with their hash kept in the repository (ADR 0008).

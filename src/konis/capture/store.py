@@ -68,6 +68,9 @@ class Outcome:
     tier: str = "T1"
 
 
+EXTERNAL_RELEASE_TAG = "docs-archive"
+
+
 class RawStore:
     def __init__(self, root: Path = config.DATA_DIR):
         self.raw = root / "raw"
@@ -83,7 +86,8 @@ class RawStore:
     def save(self, *, source_id: str, key: str, ext: str, content: bytes,
              fetched_at: datetime, manifest: dict,
              change_bytes: bytes | None = None,
-             state: dict | None = None) -> tuple[bool, str, Path | None]:
+             state: dict | None = None,
+             external_dir: Path | None = None) -> tuple[bool, str, Path | None]:
         """Store content if it changed since the last stored version for this key.
 
         Change is judged on `change_bytes` (a normalized form with volatile tokens removed)
@@ -112,7 +116,16 @@ class RawStore:
         path = d / f"{stem}.{ext}"
         if path.exists():  # never overwrite raw
             raise FileExistsError(path)
-        path.write_bytes(content)
+        if external_dir is not None:
+            # Too large for git: bytes go to a staging dir for upload as a release asset;
+            # only the manifest is committed (ADR 0008).
+            external_dir.mkdir(parents=True, exist_ok=True)
+            asset = f"{digest[:16]}__{path.name}"
+            (external_dir / asset).write_bytes(content)
+            manifest = {**manifest, "external": {"release_tag": EXTERNAL_RELEASE_TAG,
+                                                 "asset_name": asset}}
+        else:
+            path.write_bytes(content)
         man = {"source_id": source_id, "key": key, "sha256": digest, "bytes": len(content),
                "change_sha256": change, "fetched_at_utc": fetched_at.isoformat(),
                "file": path.name, **manifest}
@@ -131,6 +144,17 @@ class RawStore:
         self._latest_file(source_id).write_text(
             json.dumps(latest, indent=2, sort_keys=True) + "\n")
         return True, digest, path
+
+    def touch_state(self, source_id: str, key: str, state: dict) -> None:
+        """Record state for a key without storing content (e.g. a document too large to keep)."""
+        latest = self.latest(source_id)
+        entry = latest.setdefault(_safe(key), {})
+        if entry.get("state") == state:
+            return
+        entry["state"] = state
+        self._latest_file(source_id).parent.mkdir(parents=True, exist_ok=True)
+        self._latest_file(source_id).write_text(
+            json.dumps(latest, indent=2, sort_keys=True) + "\n")
 
     def log(self, outcome: Outcome) -> Path:
         day = outcome.fetched_at_utc[:10]

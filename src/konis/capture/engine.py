@@ -40,7 +40,8 @@ class Http:
         self.min_gap = min_gap
         self._last: dict[str, float] = {}
 
-    def get(self, url: str, params: dict | None = None, allow_404: bool = False):
+    def get(self, url: str, params: dict | None = None, allow_404: bool = False,
+            headers: dict | None = None):
         host = urlparse(url).netloc
         for attempt in range(3):
             wait = self.min_gap - (time.monotonic() - self._last.get(host, -1e9))
@@ -48,13 +49,14 @@ class Http:
                 time.sleep(wait)
             self._last[host] = time.monotonic()
             try:
-                r = self.s.get(url, params=params, timeout=config.HTTP_TIMEOUT)
+                r = self.s.get(url, params=params, headers=headers,
+                               timeout=config.HTTP_TIMEOUT)
             except requests.RequestException as e:
                 if attempt == 2:
                     raise CaptureError("error", f"{type(e).__name__}: {e}") from e
                 time.sleep(10 * (attempt + 1))
                 continue
-            if r.status_code == 404 and allow_404:
+            if (r.status_code == 404 and allow_404) or (r.status_code == 304 and headers):
                 return r
             if r.status_code in (401, 403, 451):
                 raise CaptureError("blocked", f"HTTP {r.status_code}", r.status_code)
@@ -337,6 +339,15 @@ def run_capture(run_id: str, store: RawStore | None = None, only: list[str] | No
             o = Outcome(run_id, src.source_id, key, extra.get("upstream_url", src.url), stamp,
                         "stored" if stored else "unchanged", 200, len(body), digest,
                         str(path) if path else None, tier=src.tier)
+            store.log(o)
+            outcomes.append(o)
+    if not only or "linked_docs" in only:
+        from konis.capture.harvest import run_harvest
+        try:
+            outcomes += run_harvest(http, store, run_id, now or datetime.now(UTC))
+        except Exception as e:  # noqa: BLE001 - harvester must not lose the page captures
+            o = Outcome(run_id, "linked_docs", "*", "", datetime.now(UTC).isoformat(),
+                        "error", detail=f"{type(e).__name__}: {e}")
             store.log(o)
             outcomes.append(o)
     return outcomes

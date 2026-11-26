@@ -53,6 +53,10 @@ SOURCES: tuple[Source, ...] = (
     Source("epa_osc_site", "page",
            "https://response.epa.gov/site/site_profile.aspx?site_id=17211",
            publisher="EPA On-Scene Coordinator", must_contain=("iowa", "ammunition")),
+    Source("epa_osc_documents", "page",
+           "https://response.epa.gov/site/doc_list.aspx?site_id=17211",
+           publisher="EPA On-Scene Coordinator", must_contain=("document",),
+           note="Document list for the IAAAP response; links harvested (ADR 0008)"),
     Source("epa_news_initial_air", "page",
            "https://www.epa.gov/newsreleases/initial-air-monitoring-shows-zero-detection-"
            "airborne-lead-following-controlled",
