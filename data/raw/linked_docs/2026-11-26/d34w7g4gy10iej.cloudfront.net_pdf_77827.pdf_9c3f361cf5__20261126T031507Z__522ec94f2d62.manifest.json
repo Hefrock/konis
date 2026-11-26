@@ -1,0 +1,27 @@
+{
+  "bytes": 167491,
+  "change_sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "d34w7g4gy10iej.cloudfront.net_pdf_77827.pdf_9c3f361cf5__20261126T031507Z__522ec94f2d62.pdf",
+  "final_url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf",
+  "key": "d34w7g4gy10iej.cloudfront.net_pdf_77827.pdf_9c3f361cf5",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1ceb85af4137789d8a48cbaec152b499ecc12b7b83a91cb96cbc27c03ca21193",
+  "parent_source_id": "epa_osc_site",
+  "parent_url": "https://response.epa.gov/site/site_profile.aspx?site_id=17211",
+  "publisher": "d34w7g4gy10iej.cloudfront.net",
+  "run_id": "gh-45747499651-1",
+  "sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 167491,
+    "etag": "\"0d6133b5180f3cdca833950853b06022\"",
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": "Fri, 16 Oct 2026 13:55:18 GMT",
+    "sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+    "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf"
+  },
+  "tier": "T1",
+  "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf"
+}

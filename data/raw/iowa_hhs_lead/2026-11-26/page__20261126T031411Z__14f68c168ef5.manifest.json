@@ -1,0 +1,16 @@
+{
+  "bytes": 200307,
+  "change_sha256": "acdd01e09926e200e9328286bf9cfdeeaeaeaeaa482a5c935133caf2a998da75",
+  "content_type": "text/html; charset=utf-8",
+  "fetched_at_utc": "2026-11-26T03:14:11.638186+00:00",
+  "file": "page__20261126T031411Z__14f68c168ef5.html",
+  "final_url": "https://hhs.iowa.gov/health-prevention/environmental-health/lead-exposure-surveillance",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Iowa HHS",
+  "run_id": "gh-45747499651-1",
+  "sha256": "14f68c168ef5095d553686357d23950916f37f9c5f6cb5d1180083993b5872e0",
+  "source_id": "iowa_hhs_lead",
+  "tier": "T1",
+  "url": "https://hhs.iowa.gov/health-prevention/environmental-health/lead-exposure-surveillance"
+}

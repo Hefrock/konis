@@ -1,0 +1,27 @@
+{
+  "bytes": 620553,
+  "change_sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "d34w7g4gy10iej.cloudfront.net_pdf_78382.pdf_602c5fce1c__20261126T031507Z__eb77c11a2f0f.pdf",
+  "final_url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78382.pdf",
+  "key": "d34w7g4gy10iej.cloudfront.net_pdf_78382.pdf_602c5fce1c",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1658cfc1fc73f60fe05af2cd102b6f0377038a6dfe0f195ea92e62be979d6d42",
+  "parent_source_id": "iepa_updates",
+  "parent_url": "https://epa.illinois.gov/iowa-plant-updates.html",
+  "publisher": "d34w7g4gy10iej.cloudfront.net",
+  "run_id": "gh-45747499651-1",
+  "sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 620553,
+    "etag": "\"d11f3b1559f34047f1d5f573118d235a\"",
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": "Tue, 24 Nov 2026 15:15:23 GMT",
+    "sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
+    "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78382.pdf"
+  },
+  "tier": "T1",
+  "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78382.pdf"
+}

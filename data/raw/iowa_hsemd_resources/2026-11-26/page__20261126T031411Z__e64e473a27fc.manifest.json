@@ -1,0 +1,16 @@
+{
+  "bytes": 194704,
+  "change_sha256": "38ab25bdda51d9804c9eca3fec386d626ae7045b3fddc0a520fa01877ce234f6",
+  "content_type": "text/html; charset=utf-8",
+  "fetched_at_utc": "2026-11-26T03:14:11.518870+00:00",
+  "file": "page__20261126T031411Z__e64e473a27fc.html",
+  "final_url": "https://homelandsecurity.iowa.gov/iowa-army-munitions-disposition-resources",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Iowa HSEMD",
+  "run_id": "gh-45747499651-1",
+  "sha256": "e64e473a27fc9e34f49f497100d7f0c1d7e756dc08ce8ecaefe413904653e756",
+  "source_id": "iowa_hsemd_resources",
+  "tier": "T1",
+  "url": "https://homelandsecurity.iowa.gov/iowa-army-munitions-disposition-resources"
+}

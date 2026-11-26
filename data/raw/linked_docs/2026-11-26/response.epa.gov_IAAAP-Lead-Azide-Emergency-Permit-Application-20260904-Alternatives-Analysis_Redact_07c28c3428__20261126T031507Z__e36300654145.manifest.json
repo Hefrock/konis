@@ -1,0 +1,27 @@
+{
+  "bytes": 1545557,
+  "change_sha256": "e363006541459ff3fb81260d62dd669f193440fb12f205f30acc91bd3b081bf7",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "response.epa.gov_IAAAP-Lead-Azide-Emergency-Permit-Application-20260904-Alternatives-Analysis_Redact_07c28c3428__20261126T031507Z__e36300654145.pdf",
+  "final_url": "https://response.epa.gov/sites/17211/files/IAAAP%20Lead%20Azide%20Emergency%20Permit%20Application%2020260904%20Alternatives%20Analysis_Redacted.pdf",
+  "key": "response.epa.gov_IAAAP-Lead-Azide-Emergency-Permit-Application-20260904-Alternatives-Analysis_Redact_07c28c3428",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "ec56fde6615d137f586390454f31137464ef39a292baadc78ce81c8978d1043b",
+  "parent_source_id": "epa_osc_documents",
+  "parent_url": "https://response.epa.gov/site/doc_list.aspx?site_id=17211",
+  "publisher": "response.epa.gov",
+  "run_id": "gh-45747499651-1",
+  "sha256": "e363006541459ff3fb81260d62dd669f193440fb12f205f30acc91bd3b081bf7",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 1545557,
+    "etag": null,
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": null,
+    "sha256": "e363006541459ff3fb81260d62dd669f193440fb12f205f30acc91bd3b081bf7",
+    "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Lead%20Azide%20Emergency%20Permit%20Application%2020260904%20Alternatives%20Analysis_Redacted.pdf"
+  },
+  "tier": "T1",
+  "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Lead%20Azide%20Emergency%20Permit%20Application%2020260904%20Alternatives%20Analysis_Redacted.pdf"
+}

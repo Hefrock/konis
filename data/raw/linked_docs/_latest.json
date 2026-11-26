@@ -1,0 +1,254 @@
+{
+  "d34w7g4gy10iej.cloudfront.net_pdf_77826.pdf_21ca83c463": {
+    "change_sha256": "587a6ce3cacd21bc8dc9086728084b75a99f2570c5397fa358d730adaf86fcb9",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/d34w7g4gy10iej.cloudfront.net_pdf_77826.pdf_21ca83c463__20261126T031507Z__587a6ce3cacd.pdf",
+    "sha256": "587a6ce3cacd21bc8dc9086728084b75a99f2570c5397fa358d730adaf86fcb9",
+    "state": {
+      "bytes": 697287,
+      "etag": "\"e78fc32f69f9830ed85570c152aa1be1\"",
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Fri, 16 Oct 2026 13:55:18 GMT",
+      "sha256": "587a6ce3cacd21bc8dc9086728084b75a99f2570c5397fa358d730adaf86fcb9",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77826.pdf"
+    }
+  },
+  "d34w7g4gy10iej.cloudfront.net_pdf_77827.pdf_9c3f361cf5": {
+    "change_sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/d34w7g4gy10iej.cloudfront.net_pdf_77827.pdf_9c3f361cf5__20261126T031507Z__522ec94f2d62.pdf",
+    "sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+    "state": {
+      "bytes": 167491,
+      "etag": "\"0d6133b5180f3cdca833950853b06022\"",
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Fri, 16 Oct 2026 13:55:18 GMT",
+      "sha256": "522ec94f2d62c967becc49b8db8920eed529a93b5b5ae6a552299780c78d12de",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf"
+    }
+  },
+  "d34w7g4gy10iej.cloudfront.net_pdf_78382.pdf_602c5fce1c": {
+    "change_sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/d34w7g4gy10iej.cloudfront.net_pdf_78382.pdf_602c5fce1c__20261126T031507Z__eb77c11a2f0f.pdf",
+    "sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
+    "state": {
+      "bytes": 620553,
+      "etag": "\"d11f3b1559f34047f1d5f573118d235a\"",
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Tue, 24 Nov 2026 15:15:23 GMT",
+      "sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78382.pdf"
+    }
+  },
+  "dph.illinois.gov_Illinois-Childhood-Lead-Risk-Questionnaire.pdf_8f143c4054": {
+    "change_sha256": "89f43481283c093a80f4a77bb6783cc711add62cfde68585db7e503c03c41433",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/dph.illinois.gov_Illinois-Childhood-Lead-Risk-Questionnaire.pdf_8f143c4054__20261126T031507Z__89f43481283c.pdf",
+    "sha256": "89f43481283c093a80f4a77bb6783cc711add62cfde68585db7e503c03c41433",
+    "state": {
+      "bytes": 718555,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Tue, 14 Jul 2026 21:02:27 GMT",
+      "sha256": "89f43481283c093a80f4a77bb6783cc711add62cfde68585db7e503c03c41433",
+      "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/resources/topics-services/environmental-health-protection/lead-poisoning-prevention/Illinois-Childhood-Lead-Risk-Questionnaire.pdf"
+    }
+  },
+  "dph.illinois.gov_children-lead-booklet-2025.pdf_4595b5edb0": {
+    "change_sha256": "135c9391189c54f618147908af1c937fd09dfa63bf1c0587204c2f8003045a5b",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/dph.illinois.gov_children-lead-booklet-2025.pdf_4595b5edb0__20261126T031507Z__135c9391189c.pdf",
+    "sha256": "135c9391189c54f618147908af1c937fd09dfa63bf1c0587204c2f8003045a5b",
+    "state": {
+      "bytes": 11541400,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Fri, 04 Apr 2025 21:38:33 GMT",
+      "sha256": "135c9391189c54f618147908af1c937fd09dfa63bf1c0587204c2f8003045a5b",
+      "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/publications/idph/topics-and-services/environmental-health-protection/lead-poisoning-prevention/children-lead-booklet-2025.pdf"
+    }
+  },
+  "dph.illinois.gov_lead-cleaning-checklist.pdf_8c9db70785": {
+    "change_sha256": "4fbcb1e5162d78c39475b434c3ecab324c00b9b8134b0da16d3b6c07f0c0566f",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/dph.illinois.gov_lead-cleaning-checklist.pdf_8c9db70785__20261126T031507Z__4fbcb1e5162d.pdf",
+    "sha256": "4fbcb1e5162d78c39475b434c3ecab324c00b9b8134b0da16d3b6c07f0c0566f",
+    "state": {
+      "bytes": 341934,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Wed, 25 Jan 2023 17:52:13 GMT",
+      "sha256": "4fbcb1e5162d78c39475b434c3ecab324c00b9b8134b0da16d3b6c07f0c0566f",
+      "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/publications/lead-cleaning-checklist.pdf"
+    }
+  },
+  "epa.illinois.gov_ISBE-Letter-to-Superintendents.pdf_2fdef94d68": {
+    "change_sha256": "497903cda5003ba14f52492d38e8e04b1a7e4e9772f83f10d1980b89141bf928",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/epa.illinois.gov_ISBE-Letter-to-Superintendents.pdf_2fdef94d68__20261126T031507Z__497903cda500.pdf",
+    "sha256": "497903cda5003ba14f52492d38e8e04b1a7e4e9772f83f10d1980b89141bf928",
+    "state": {
+      "bytes": 93545,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Mon, 23 Nov 2026 22:25:23 GMT",
+      "sha256": "497903cda5003ba14f52492d38e8e04b1a7e4e9772f83f10d1980b89141bf928",
+      "url": "https://epa.illinois.gov/content/dam/soi/en/web/epa/topics/community-relations/documents/ISBE-Letter-to-Superintendents.pdf"
+    }
+  },
+  "idec.illinois.gov_Safety-Briefing-for-Tentatively-Planned-Lead-Azide-FR.pdf_af5e34f2cf": {
+    "change_sha256": "da523b907761ea8e40721ccf23902278dd200a3a06fa1b3803f0695654953eb8",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/idec.illinois.gov_Safety-Briefing-for-Tentatively-Planned-Lead-Azide-FR.pdf_af5e34f2cf__20261126T031507Z__da523b907761.pdf",
+    "sha256": "da523b907761ea8e40721ccf23902278dd200a3a06fa1b3803f0695654953eb8",
+    "state": {
+      "bytes": 169568,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Mon, 23 Nov 2026 23:42:23 GMT",
+      "sha256": "da523b907761ea8e40721ccf23902278dd200a3a06fa1b3803f0695654953eb8",
+      "url": "https://idec.illinois.gov/content/dam/soi/en/web/idec/news/2026/Safety-Briefing-for-Tentatively-Planned-Lead-Azide-FR.pdf"
+    }
+  },
+  "idec.illinois.gov_Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf_d395afeaee": {
+    "change_sha256": "08607a4a784af0a7b8cc721e3471cd62f4788dc8c1939babecb167954953925c",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/idec.illinois.gov_Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf_d395afeaee__20261126T031507Z__08607a4a784a.pdf",
+    "sha256": "08607a4a784af0a7b8cc721e3471cd62f4788dc8c1939babecb167954953925c",
+    "state": {
+      "bytes": 459240,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Mon, 23 Nov 2026 22:59:34 GMT",
+      "sha256": "08607a4a784af0a7b8cc721e3471cd62f4788dc8c1939babecb167954953925c",
+      "url": "https://idec.illinois.gov/content/dam/soi/en/web/idec/news/2026/Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---App-D_Redacted.pdf_b4e2f405b8": {
+    "change_sha256": "85710669ec96ebf11ee56c8f75035db61059a70231f950fcc1749d16b49611c1",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---App-D_Redacted.pdf_b4e2f405b8__20261126T031507Z__85710669ec96.pdf",
+    "sha256": "85710669ec96ebf11ee56c8f75035db61059a70231f950fcc1749d16b49611c1",
+    "state": {
+      "bytes": 4204736,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "85710669ec96ebf11ee56c8f75035db61059a70231f950fcc1749d16b49611c1",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide%20-%20App%20D_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---Appendix-C-2_Redac_4851906308": {
+    "change_sha256": "3f70f0a0520ef9c7e688ea63bb522e4a89e5e3788ccac17a631191bef3595200",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---Appendix-C-2_Redac_4851906308__20261126T031507Z__3f70f0a0520e.pdf",
+    "sha256": "3f70f0a0520ef9c7e688ea63bb522e4a89e5e3788ccac17a631191bef3595200",
+    "state": {
+      "bytes": 7572214,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "3f70f0a0520ef9c7e688ea63bb522e4a89e5e3788ccac17a631191bef3595200",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide%20-%20Appendix%20C%202_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---QAPP-2_Redacted.pd_d8f440d5da": {
+    "change_sha256": "734aedad86c9ae66b636c00155b185fbb4e49f5c0a2cc00b4797138bf9534337",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---QAPP-2_Redacted.pd_d8f440d5da__20261126T031507Z__734aedad86c9.pdf",
+    "sha256": "734aedad86c9ae66b636c00155b185fbb4e49f5c0a2cc00b4797138bf9534337",
+    "state": {
+      "bytes": 77808400,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "734aedad86c9ae66b636c00155b185fbb4e49f5c0a2cc00b4797138bf9534337",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide%20-%20QAPP%202_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide_Redacted.pdf_7c2c55ca35": {
+    "change_sha256": "bbe76b46811b6d201fdb4558c18ada0e296120b1993eb924a1aaf3d9f505a3ce",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide_Redacted.pdf_7c2c55ca35__20261126T031507Z__bbe76b46811b.pdf",
+    "sha256": "bbe76b46811b6d201fdb4558c18ada0e296120b1993eb924a1aaf3d9f505a3ce",
+    "state": {
+      "bytes": 190783224,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "bbe76b46811b6d201fdb4558c18ada0e296120b1993eb924a1aaf3d9f505a3ce",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Emergency-Permit-for-Treatment-and-Storage---FINAL_Redacted.pdf_810e60a699": {
+    "change_sha256": "9c409ac636789c81aac03473481e12c0836e207741b9042ff49818bf69bbbafa",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Emergency-Permit-for-Treatment-and-Storage---FINAL_Redacted.pdf_810e60a699__20261126T031507Z__9c409ac63678.pdf",
+    "sha256": "9c409ac636789c81aac03473481e12c0836e207741b9042ff49818bf69bbbafa",
+    "state": {
+      "bytes": 7089184,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "9c409ac636789c81aac03473481e12c0836e207741b9042ff49818bf69bbbafa",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20for%20Treatment%20and%20Storage%20-%20FINAL_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Lead-Azide-Emergency-Permit-Application-20260812-Alternatives-Analysis_Redact_870d463628": {
+    "change_sha256": "f64f741ba239c5dad012e4e957df9f40f121170cbe1621ab39535ae51e86cc26",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Lead-Azide-Emergency-Permit-Application-20260812-Alternatives-Analysis_Redact_870d463628__20261126T031507Z__f64f741ba239.pdf",
+    "sha256": "f64f741ba239c5dad012e4e957df9f40f121170cbe1621ab39535ae51e86cc26",
+    "state": {
+      "bytes": 389006,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "f64f741ba239c5dad012e4e957df9f40f121170cbe1621ab39535ae51e86cc26",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Lead%20Azide%20Emergency%20Permit%20Application%2020260812%20Alternatives%20Analysis_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_IAAAP-Lead-Azide-Emergency-Permit-Application-20260904-Alternatives-Analysis_Redact_07c28c3428": {
+    "change_sha256": "e363006541459ff3fb81260d62dd669f193440fb12f205f30acc91bd3b081bf7",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_IAAAP-Lead-Azide-Emergency-Permit-Application-20260904-Alternatives-Analysis_Redact_07c28c3428__20261126T031507Z__e36300654145.pdf",
+    "sha256": "e363006541459ff3fb81260d62dd669f193440fb12f205f30acc91bd3b081bf7",
+    "state": {
+      "bytes": 1545557,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "e363006541459ff3fb81260d62dd669f193440fb12f205f30acc91bd3b081bf7",
+      "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Lead%20Azide%20Emergency%20Permit%20Application%2020260904%20Alternatives%20Analysis_Redacted.pdf"
+    }
+  },
+  "response.epa.gov_R7-Letter-to-Governor-Reynolds.pdf_2e9ec7bccf": {
+    "change_sha256": "3ad157d1db33b19b292fc0898c412d12bf5470b9c280703f11e5209bdd8165fd",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/response.epa.gov_R7-Letter-to-Governor-Reynolds.pdf_2e9ec7bccf__20261126T031507Z__3ad157d1db33.pdf",
+    "sha256": "3ad157d1db33b19b292fc0898c412d12bf5470b9c280703f11e5209bdd8165fd",
+    "state": {
+      "bytes": 250668,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": null,
+      "sha256": "3ad157d1db33b19b292fc0898c412d12bf5470b9c280703f11e5209bdd8165fd",
+      "url": "https://response.epa.gov/sites/17211/files/R7%20Letter%20to%20Governor%20Reynolds.pdf"
+    }
+  },
+  "www.gsa.gov_SF95-07a.pdf_40804a4a83": {
+    "change_sha256": "7c58078520934a0dc2c28ec9e59064548a38df3ac26f63c6a7d83a3280c9afe4",
+    "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+    "file": "linked_docs/2026-11-26/www.gsa.gov_SF95-07a.pdf_40804a4a83__20261126T031507Z__7c5807852093.pdf",
+    "sha256": "7c58078520934a0dc2c28ec9e59064548a38df3ac26f63c6a7d83a3280c9afe4",
+    "state": {
+      "bytes": 591001,
+      "etag": null,
+      "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+      "last_modified": "Mon, 08 May 2023 15:46:06 GMT",
+      "sha256": "7c58078520934a0dc2c28ec9e59064548a38df3ac26f63c6a7d83a3280c9afe4",
+      "url": "https://www.gsa.gov/system/files/SF95-07a.pdf"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "bytes": 7572214,
+  "change_sha256": "3f70f0a0520ef9c7e688ea63bb522e4a89e5e3788ccac17a631191bef3595200",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---Appendix-C-2_Redac_4851906308__20261126T031507Z__3f70f0a0520e.pdf",
+  "final_url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide%20-%20Appendix%20C%202_Redacted.pdf",
+  "key": "response.epa.gov_IAAAP-Emergency-Permit-Application-for-Treatment-of-Lead-Azide---Appendix-C-2_Redac_4851906308",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1ceb85af4137789d8a48cbaec152b499ecc12b7b83a91cb96cbc27c03ca21193",
+  "parent_source_id": "epa_osc_site",
+  "parent_url": "https://response.epa.gov/site/site_profile.aspx?site_id=17211",
+  "publisher": "response.epa.gov",
+  "run_id": "gh-45747499651-1",
+  "sha256": "3f70f0a0520ef9c7e688ea63bb522e4a89e5e3788ccac17a631191bef3595200",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 7572214,
+    "etag": null,
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": null,
+    "sha256": "3f70f0a0520ef9c7e688ea63bb522e4a89e5e3788ccac17a631191bef3595200",
+    "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide%20-%20Appendix%20C%202_Redacted.pdf"
+  },
+  "tier": "T1",
+  "url": "https://response.epa.gov/sites/17211/files/IAAAP%20Emergency%20Permit%20Application%20for%20Treatment%20of%20Lead%20Azide%20-%20Appendix%20C%202_Redacted.pdf"
+}

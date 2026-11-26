@@ -1,0 +1,31 @@
+{
+  "bytes": 11541400,
+  "change_sha256": "135c9391189c54f618147908af1c937fd09dfa63bf1c0587204c2f8003045a5b",
+  "content_type": "application/pdf",
+  "external": {
+    "asset_name": "135c9391189c54f6__dph.illinois.gov_children-lead-booklet-2025.pdf_4595b5edb0__20261126T031507Z__135c9391189c.pdf",
+    "release_tag": "docs-archive"
+  },
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "dph.illinois.gov_children-lead-booklet-2025.pdf_4595b5edb0__20261126T031507Z__135c9391189c.pdf",
+  "final_url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/publications/idph/topics-and-services/environmental-health-protection/lead-poisoning-prevention/children-lead-booklet-2025.pdf",
+  "key": "dph.illinois.gov_children-lead-booklet-2025.pdf_4595b5edb0",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1658cfc1fc73f60fe05af2cd102b6f0377038a6dfe0f195ea92e62be979d6d42",
+  "parent_source_id": "iepa_updates",
+  "parent_url": "https://epa.illinois.gov/iowa-plant-updates.html",
+  "publisher": "dph.illinois.gov",
+  "run_id": "gh-45747499651-1",
+  "sha256": "135c9391189c54f618147908af1c937fd09dfa63bf1c0587204c2f8003045a5b",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 11541400,
+    "etag": null,
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": "Fri, 04 Apr 2025 21:38:33 GMT",
+    "sha256": "135c9391189c54f618147908af1c937fd09dfa63bf1c0587204c2f8003045a5b",
+    "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/publications/idph/topics-and-services/environmental-health-protection/lead-poisoning-prevention/children-lead-booklet-2025.pdf"
+  },
+  "tier": "T1",
+  "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/publications/idph/topics-and-services/environmental-health-protection/lead-poisoning-prevention/children-lead-booklet-2025.pdf"
+}

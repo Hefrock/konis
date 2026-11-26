@@ -1,0 +1,27 @@
+{
+  "bytes": 459240,
+  "change_sha256": "08607a4a784af0a7b8cc721e3471cd62f4788dc8c1939babecb167954953925c",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "idec.illinois.gov_Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf_d395afeaee__20261126T031507Z__08607a4a784a.pdf",
+  "final_url": "https://idec.illinois.gov/content/dam/soi/en/web/idec/news/2026/Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf",
+  "key": "idec.illinois.gov_Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf_d395afeaee",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1658cfc1fc73f60fe05af2cd102b6f0377038a6dfe0f195ea92e62be979d6d42",
+  "parent_source_id": "iepa_updates",
+  "parent_url": "https://epa.illinois.gov/iowa-plant-updates.html",
+  "publisher": "idec.illinois.gov",
+  "run_id": "gh-45747499651-1",
+  "sha256": "08607a4a784af0a7b8cc721e3471cd62f4788dc8c1939babecb167954953925c",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 459240,
+    "etag": null,
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": "Mon, 23 Nov 2026 22:59:34 GMT",
+    "sha256": "08607a4a784af0a7b8cc721e3471cd62f4788dc8c1939babecb167954953925c",
+    "url": "https://idec.illinois.gov/content/dam/soi/en/web/idec/news/2026/Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf"
+  },
+  "tier": "T1",
+  "url": "https://idec.illinois.gov/content/dam/soi/en/web/idec/news/2026/Safety-Briefing-for-Tentatively-Planned-Lead-Azide-TR.Chinese.pdf"
+}

@@ -1,0 +1,20 @@
+{
+  "bytes": 4746,
+  "change_sha256": "8008be68130e9019287b50e2fcbb74fca0d53107bb7034750baf882f5a597681",
+  "clip": "rows whose AQSID is in sites file in BBOX",
+  "fetched_at_utc": "2026-11-26T03:14:37.344252+00:00",
+  "file": "2026112602__20261126T031437Z__8008be68130e.dat",
+  "key": "2026112602",
+  "kind": "airnow_hourly",
+  "publisher": "EPA AirNow (preliminary, unvalidated)",
+  "rows": 66,
+  "run_id": "gh-45747499651-1",
+  "sha256": "8008be68130e9019287b50e2fcbb74fca0d53107bb7034750baf882f5a597681",
+  "source_id": "airnow_hourly",
+  "tier": "T1",
+  "upstream_bytes": 438165,
+  "upstream_sha256": "00aa81436626cc910ef5581ce2662490974fa0def1a2297076788e3b16cffabc",
+  "upstream_url": "https://files.airnowtech.org/airnow/2026/20261126/HourlyData_2026112602.dat",
+  "url": "https://files.airnowtech.org/airnow",
+  "valid_hour_utc": "2026-11-26T02:00:00+00:00"
+}

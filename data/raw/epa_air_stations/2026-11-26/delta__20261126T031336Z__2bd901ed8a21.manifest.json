@@ -1,0 +1,31 @@
+{
+  "after_oid": 43,
+  "bytes": 303,
+  "change_sha256": "2bd901ed8a2139f10ded6332bb9a26dc128e4a08d1820f8ed9e09fcbe62ee52c",
+  "data_last_edit_ms": 1795577250727,
+  "feature_count": 0,
+  "feature_count_total": 43,
+  "fetched_at_utc": "2026-11-26T03:13:36.122610+00:00",
+  "fields": [
+    "OBJECTID",
+    "Station_ID",
+    "Instrument_Type",
+    "GlobalID"
+  ],
+  "file": "delta__20261126T031336Z__2bd901ed8a21.json",
+  "key": "delta",
+  "kind": "arcgis_layer",
+  "mode": "delta",
+  "publisher": "EPA Region 7",
+  "run_id": "gh-45747499651-1",
+  "sha256": "2bd901ed8a2139f10ded6332bb9a26dc128e4a08d1820f8ed9e09fcbe62ee52c",
+  "source_id": "epa_air_stations",
+  "state": {
+    "count": 43,
+    "data_last_edit_ms": 1795577250727,
+    "day": "2026-11-26",
+    "max_oid": 43
+  },
+  "tier": "T1",
+  "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Air_Sampling_and_Monitoring_Location/FeatureServer/0"
+}

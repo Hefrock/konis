@@ -1,0 +1,27 @@
+{
+  "bytes": 250668,
+  "change_sha256": "3ad157d1db33b19b292fc0898c412d12bf5470b9c280703f11e5209bdd8165fd",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "response.epa.gov_R7-Letter-to-Governor-Reynolds.pdf_2e9ec7bccf__20261126T031507Z__3ad157d1db33.pdf",
+  "final_url": "https://response.epa.gov/sites/17211/files/R7%20Letter%20to%20Governor%20Reynolds.pdf",
+  "key": "response.epa.gov_R7-Letter-to-Governor-Reynolds.pdf_2e9ec7bccf",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1ceb85af4137789d8a48cbaec152b499ecc12b7b83a91cb96cbc27c03ca21193",
+  "parent_source_id": "epa_osc_site",
+  "parent_url": "https://response.epa.gov/site/site_profile.aspx?site_id=17211",
+  "publisher": "response.epa.gov",
+  "run_id": "gh-45747499651-1",
+  "sha256": "3ad157d1db33b19b292fc0898c412d12bf5470b9c280703f11e5209bdd8165fd",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 250668,
+    "etag": null,
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": null,
+    "sha256": "3ad157d1db33b19b292fc0898c412d12bf5470b9c280703f11e5209bdd8165fd",
+    "url": "https://response.epa.gov/sites/17211/files/R7%20Letter%20to%20Governor%20Reynolds.pdf"
+  },
+  "tier": "T1",
+  "url": "https://response.epa.gov/sites/17211/files/R7%20Letter%20to%20Governor%20Reynolds.pdf"
+}

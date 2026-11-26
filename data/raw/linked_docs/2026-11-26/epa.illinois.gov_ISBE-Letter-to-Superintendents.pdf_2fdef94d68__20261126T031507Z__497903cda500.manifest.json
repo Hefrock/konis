@@ -1,0 +1,27 @@
+{
+  "bytes": 93545,
+  "change_sha256": "497903cda5003ba14f52492d38e8e04b1a7e4e9772f83f10d1980b89141bf928",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
+  "file": "epa.illinois.gov_ISBE-Letter-to-Superintendents.pdf_2fdef94d68__20261126T031507Z__497903cda500.pdf",
+  "final_url": "https://epa.illinois.gov/content/dam/soi/en/web/epa/topics/community-relations/documents/ISBE-Letter-to-Superintendents.pdf",
+  "key": "epa.illinois.gov_ISBE-Letter-to-Superintendents.pdf_2fdef94d68",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "1658cfc1fc73f60fe05af2cd102b6f0377038a6dfe0f195ea92e62be979d6d42",
+  "parent_source_id": "iepa_updates",
+  "parent_url": "https://epa.illinois.gov/iowa-plant-updates.html",
+  "publisher": "epa.illinois.gov",
+  "run_id": "gh-45747499651-1",
+  "sha256": "497903cda5003ba14f52492d38e8e04b1a7e4e9772f83f10d1980b89141bf928",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 93545,
+    "etag": null,
+    "last_checked_utc": "2026-11-26T03:15:07.750879+00:00",
+    "last_modified": "Mon, 23 Nov 2026 22:25:23 GMT",
+    "sha256": "497903cda5003ba14f52492d38e8e04b1a7e4e9772f83f10d1980b89141bf928",
+    "url": "https://epa.illinois.gov/content/dam/soi/en/web/epa/topics/community-relations/documents/ISBE-Letter-to-Superintendents.pdf"
+  },
+  "tier": "T1",
+  "url": "https://epa.illinois.gov/content/dam/soi/en/web/epa/topics/community-relations/documents/ISBE-Letter-to-Superintendents.pdf"
+}

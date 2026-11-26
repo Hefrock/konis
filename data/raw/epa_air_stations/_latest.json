@@ -1,4 +1,16 @@
 {
+  "delta": {
+    "change_sha256": "2bd901ed8a2139f10ded6332bb9a26dc128e4a08d1820f8ed9e09fcbe62ee52c",
+    "fetched_at_utc": "2026-11-26T03:13:36.122610+00:00",
+    "file": "epa_air_stations/2026-11-26/delta__20261126T031336Z__2bd901ed8a21.json",
+    "sha256": "2bd901ed8a2139f10ded6332bb9a26dc128e4a08d1820f8ed9e09fcbe62ee52c",
+    "state": {
+      "count": 43,
+      "data_last_edit_ms": 1795577250727,
+      "day": "2026-11-26",
+      "max_oid": 43
+    }
+  },
   "full": {
     "change_sha256": "44ca7d58c4d38a2c8e9fa62dfbd81e16336e5bbf3e737efefe2cbbb5820ad7ca",
     "fetched_at_utc": "2026-11-25T23:06:34.297697+00:00",
