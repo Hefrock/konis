@@ -1,8 +1,8 @@
 {
   "latest": {
-    "change_sha256": "e2bf949eff9d655e58df92128fc0c9e7c5800b1d00f23bf28d49d31d02f36200",
-    "fetched_at_utc": "2026-11-27T02:03:27.955852+00:00",
-    "file": "metar_awc/2026-11-27/latest__20261127T020327Z__e2bf949eff9d.json",
-    "sha256": "e2bf949eff9d655e58df92128fc0c9e7c5800b1d00f23bf28d49d31d02f36200"
+    "change_sha256": "91ba1dcfaa595a82434709bcd903424d814460c3b65cc41403e2d50e97b0db72",
+    "fetched_at_utc": "2026-11-27T03:03:21.211842+00:00",
+    "file": "metar_awc/2026-11-27/latest__20261127T030321Z__91ba1dcfaa59.json",
+    "sha256": "91ba1dcfaa595a82434709bcd903424d814460c3b65cc41403e2d50e97b0db72"
   }
 }
