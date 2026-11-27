@@ -92,14 +92,14 @@ SOURCES: tuple[Source, ...] = (
                f"https://governor.mo.gov/press-releases/archive/{slug}",
                publisher="Missouri Governor's Office", must_contain=("lead", "army"))
         for sid, slug in (
-            ("post_detonation", "governor-kehoes-statement-following-detonation-iowa-army-"
-             "ammunition-plant"),
-            ("new_details", "state-missouri-shares-new-details-planned-detonation-iowa-army-"
-             "ammunition"),
-            ("public_animal_health", "state-missouri-acting-ensure-public-and-animal-health-"
-             "preparation-us-armys"),
-            ("seoc_activation", "governor-kehoe-activates-state-emergency-operation-center-"
-             "preparation"),
+            ("post_detonation", ("governor-kehoes-statement-following-detonation-iowa-army-"
+             "ammunition-plant")),
+            ("new_details", ("state-missouri-shares-new-details-planned-detonation-iowa-army-"
+             "ammunition")),
+            ("public_animal_health", ("state-missouri-acting-ensure-public-and-animal-health-"
+             "preparation-us-armys")),
+            ("seoc_activation", ("governor-kehoe-activates-state-emergency-operation-center-"
+             "preparation")),
         )
     ),
     # --- Meteorology ---
