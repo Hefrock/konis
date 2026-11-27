@@ -72,3 +72,9 @@ detonation for 20 November at about noon. It happened on 25 November at about 9 
 reading only the first advisory would have the wrong day and the wrong hour. An archive that
 keeps every version shows that the plan changed, and when, rather than only what finally
 happened (ADR 0013).
+
+### 12. An alarm that rang every hour (27 Nov 2026)
+One Army page flickered between "found" and "not found". Each flicker opened or closed an alert,
+three times in a day, with a comment on every run. A person learns to ignore an alarm like that,
+and then misses the real one. Alerts now need two failures in a row to open and two successes in
+a row to close; every failure is still logged (ADR 0014).

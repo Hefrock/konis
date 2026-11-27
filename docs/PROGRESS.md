@@ -24,3 +24,4 @@ Next: owner sends EPA request; PurpleAir key; dashboard, 7-day baseline, then HR
 
 Done 27 Nov: Missouri and Army ASC sources (ADR 0013); detonation time confirmed by the Army.
 OpenAQ checked: no coverage within 50 km; low-cost sensors out of scope.
+Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcribed to data/seed/.
