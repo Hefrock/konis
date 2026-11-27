@@ -92,12 +92,38 @@ def cmd_analyze(a) -> int:
     from konis.analysis import xact_wind
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], check=False, capture_output=True,
                             text=True).stdout.strip() or "unknown"
-    text = xact_wind.report(xact_wind.run(), commit)
-    out = Path("docs/results") / f"xact-wind-{commit}.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(text)
-    print(text)
-    print("wrote", out)
+    if a.name == "xact-wind":
+        text = xact_wind.report(xact_wind.run(), commit)
+        out = Path("docs/results") / f"xact-wind-{commit}.md"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text)
+        print(text)
+        print("wrote", out)
+        return 0
+    from konis.analysis import transect
+    if a.name == "transect-a":
+        rows = transect.part_a()
+        d = Path("docs/results")
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "transect-partA.svg").write_text(transect.svg_plot(rows))
+        (d / f"transect-partA-{commit}.md").write_text(transect.report_a(rows, commit))
+        print(transect.report_a(rows, commit))
+        return 0
+    # transect-b: bot-safe outputs under data/ (K9); list newly completed episodes for alerts
+    import json
+    res = transect.part_b()
+    out = Path("data/curated/transect_episodes.json")
+    seen = set(json.loads(out.read_text())["completed_ids"]) if out.exists() else set()
+    ids = [e["episode_id"] for e in res["completed"]]
+    out.write_text(json.dumps({"completed_ids": ids,
+                               "pending_ids": [e["episode_id"] for e in res["pending"]]},
+                              indent=2) + "\n")
+    Path("data/curated/transect_partB.md").write_text(transect.report_b(res, commit))
+    new = [i for i in ids if i not in seen]
+    if a.new_out:
+        Path(a.new_out).write_text("\n".join(new))
+    print(transect.report_b(res, commit))
+    print("newly completed episodes:", new or "none")
     return 0
 
 
@@ -122,7 +148,8 @@ def main(argv: list[str] | None = None) -> int:
     se.add_argument("action", choices=["fetch", "analyze"])
     se.set_defaults(fn=cmd_seismic)
     an = sub.add_parser("analyze", help="pre-registered analyses (ADR 0009)")
-    an.add_argument("name", choices=["xact-wind"])
+    an.add_argument("name", choices=["xact-wind", "transect-a", "transect-b"])
+    an.add_argument("--new-out", help="transect-b: write newly completed episode ids here")
     an.set_defaults(fn=cmd_analyze)
     a = p.parse_args(argv)
     return a.fn(a)
