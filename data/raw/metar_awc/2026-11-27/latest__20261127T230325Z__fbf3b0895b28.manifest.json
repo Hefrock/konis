@@ -1,0 +1,20 @@
+{
+  "bytes": 6730,
+  "change_sha256": "fbf3b0895b283d730d63d93e2c6b5dddf66e59879ebfd8fcc77515a0c1289e4d",
+  "fetched_at_utc": "2026-11-27T23:03:25.294458+00:00",
+  "file": "latest__20261127T230325Z__fbf3b0895b28.json",
+  "key": "latest",
+  "kind": "json",
+  "params": {
+    "format": "json",
+    "hours": "3",
+    "ids": "KBRL,KMLI,KOTM,KIRK,KUIN"
+  },
+  "publisher": "NOAA Aviation Weather Center",
+  "records": 15,
+  "run_id": "gh-46080121019-1",
+  "sha256": "fbf3b0895b283d730d63d93e2c6b5dddf66e59879ebfd8fcc77515a0c1289e4d",
+  "source_id": "metar_awc",
+  "tier": "T1",
+  "url": "https://aviationweather.gov/api/data/metar"
+}
