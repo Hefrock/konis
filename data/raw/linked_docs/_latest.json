@@ -27,6 +27,48 @@
       "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_77827.pdf"
     }
   },
+  "d34w7g4gy10iej.cloudfront.net_pdf_78347.pdf_e65576df00": {
+    "change_sha256": "91a49267a74c65f5389e85b7d11d64020c072754f9a007d24565ef1722bcc43f",
+    "fetched_at_utc": "2026-11-27T04:43:38.107561+00:00",
+    "file": "linked_docs/2026-11-27/d34w7g4gy10iej.cloudfront.net_pdf_78347.pdf_e65576df00__20261127T044338Z__91a49267a74c.pdf",
+    "sha256": "91a49267a74c65f5389e85b7d11d64020c072754f9a007d24565ef1722bcc43f",
+    "state": {
+      "bytes": 825336,
+      "etag": "\"647ad820060a688d635292709cca57c2\"",
+      "last_checked_utc": "2026-11-27T04:43:38.107561+00:00",
+      "last_modified": "Tue, 17 Nov 2026 14:32:58 GMT",
+      "sha256": "91a49267a74c65f5389e85b7d11d64020c072754f9a007d24565ef1722bcc43f",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78347.pdf"
+    }
+  },
+  "d34w7g4gy10iej.cloudfront.net_pdf_78364.pdf_de88fc58e3": {
+    "change_sha256": "064078508cdca2c7eeb220247a847c52b40db21a6c79c63e49d06c06275d9969",
+    "fetched_at_utc": "2026-11-27T04:43:38.107561+00:00",
+    "file": "linked_docs/2026-11-27/d34w7g4gy10iej.cloudfront.net_pdf_78364.pdf_de88fc58e3__20261127T044338Z__064078508cdc.pdf",
+    "sha256": "064078508cdca2c7eeb220247a847c52b40db21a6c79c63e49d06c06275d9969",
+    "state": {
+      "bytes": 1025491,
+      "etag": "\"cf1f51fce4223927054b09f9064a1a72\"",
+      "last_checked_utc": "2026-11-27T04:43:38.107561+00:00",
+      "last_modified": "Wed, 18 Nov 2026 20:34:31 GMT",
+      "sha256": "064078508cdca2c7eeb220247a847c52b40db21a6c79c63e49d06c06275d9969",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78364.pdf"
+    }
+  },
+  "d34w7g4gy10iej.cloudfront.net_pdf_78366.pdf_b1fe864828": {
+    "change_sha256": "1a4e6f070486396b556cdf3876170f457d49671b029bb8e893c92c41437d29d2",
+    "fetched_at_utc": "2026-11-27T04:43:38.107561+00:00",
+    "file": "linked_docs/2026-11-27/d34w7g4gy10iej.cloudfront.net_pdf_78366.pdf_b1fe864828__20261127T044338Z__1a4e6f070486.pdf",
+    "sha256": "1a4e6f070486396b556cdf3876170f457d49671b029bb8e893c92c41437d29d2",
+    "state": {
+      "bytes": 898333,
+      "etag": "\"7ed4b08df236103937fb110f2a9dcd1b\"",
+      "last_checked_utc": "2026-11-27T04:43:38.107561+00:00",
+      "last_modified": "Thu, 19 Nov 2026 00:30:43 GMT",
+      "sha256": "1a4e6f070486396b556cdf3876170f457d49671b029bb8e893c92c41437d29d2",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78366.pdf"
+    }
+  },
   "d34w7g4gy10iej.cloudfront.net_pdf_78382.pdf_602c5fce1c": {
     "change_sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
     "fetched_at_utc": "2026-11-26T03:15:07.750879+00:00",
@@ -39,6 +81,20 @@
       "last_modified": "Tue, 24 Nov 2026 15:15:23 GMT",
       "sha256": "eb77c11a2f0ff8fcc84e9e18bf304c05f80227d3e89c373cc238445194f66be8",
       "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78382.pdf"
+    }
+  },
+  "d34w7g4gy10iej.cloudfront.net_pdf_78387.pdf_d0b61510ef": {
+    "change_sha256": "a8672ed30d787e0a9c5e4fc3e4f2358288aaa05f567ddbdc1380e09901bb3905",
+    "fetched_at_utc": "2026-11-27T04:43:38.107561+00:00",
+    "file": "linked_docs/2026-11-27/d34w7g4gy10iej.cloudfront.net_pdf_78387.pdf_d0b61510ef__20261127T044338Z__a8672ed30d78.pdf",
+    "sha256": "a8672ed30d787e0a9c5e4fc3e4f2358288aaa05f567ddbdc1380e09901bb3905",
+    "state": {
+      "bytes": 254672,
+      "etag": "\"8a81a5d73d54f867895db240a6f10f1e\"",
+      "last_checked_utc": "2026-11-27T04:43:38.107561+00:00",
+      "last_modified": "Wed, 25 Nov 2026 00:05:02 GMT",
+      "sha256": "a8672ed30d787e0a9c5e4fc3e4f2358288aaa05f567ddbdc1380e09901bb3905",
+      "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78387.pdf"
     }
   },
   "dph.illinois.gov_Illinois-Childhood-Lead-Risk-Questionnaire.pdf_8f143c4054": {

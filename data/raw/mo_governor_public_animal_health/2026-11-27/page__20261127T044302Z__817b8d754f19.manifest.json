@@ -1,0 +1,16 @@
+{
+  "bytes": 36221,
+  "change_sha256": "0924fa55a3ff59f38644530a85e5efd270c7425b69071bc58535e0e3ddbdf7f2",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched_at_utc": "2026-11-27T04:43:02.734566+00:00",
+  "file": "page__20261127T044302Z__817b8d754f19.html",
+  "final_url": "https://governor.mo.gov/press-releases/archive/state-missouri-acting-ensure-public-and-animal-health-preparation-us-armys",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Missouri Governor's Office",
+  "run_id": "gh-45941415201-1",
+  "sha256": "817b8d754f19cd3c8ccaaa348f5ec383344669ccee84661502f6fde4d6da7f38",
+  "source_id": "mo_governor_public_animal_health",
+  "tier": "T1",
+  "url": "https://governor.mo.gov/press-releases/archive/state-missouri-acting-ensure-public-and-animal-health-preparation-us-armys"
+}

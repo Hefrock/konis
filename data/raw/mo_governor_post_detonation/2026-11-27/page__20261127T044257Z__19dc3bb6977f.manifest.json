@@ -1,0 +1,16 @@
+{
+  "bytes": 35353,
+  "change_sha256": "131b1c481191628abff73e06762d6162d2628676c4e89fb7c22748a133f871ba",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched_at_utc": "2026-11-27T04:42:57.627516+00:00",
+  "file": "page__20261127T044257Z__19dc3bb6977f.html",
+  "final_url": "https://governor.mo.gov/press-releases/archive/governor-kehoes-statement-following-detonation-iowa-army-ammunition-plant",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Missouri Governor's Office",
+  "run_id": "gh-45941415201-1",
+  "sha256": "19dc3bb6977fb1be5523483925109ab4ef15ac8e368f821bdf5a9fa76deef960",
+  "source_id": "mo_governor_post_detonation",
+  "tier": "T1",
+  "url": "https://governor.mo.gov/press-releases/archive/governor-kehoes-statement-following-detonation-iowa-army-ammunition-plant"
+}

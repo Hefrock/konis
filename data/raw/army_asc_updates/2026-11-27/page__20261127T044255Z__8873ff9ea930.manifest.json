@@ -1,0 +1,16 @@
+{
+  "bytes": 73220,
+  "change_sha256": "8873ff9ea93013641cdd3873f5467845a005dc02032b994e13d1a88291b30311",
+  "content_type": "text/html; charset=utf-8",
+  "fetched_at_utc": "2026-11-27T04:42:55.894158+00:00",
+  "file": "page__20261127T044255Z__8873ff9ea930.html",
+  "final_url": "https://www.army.mil/asc",
+  "key": "page",
+  "kind": "page",
+  "publisher": "U.S. Army ASC",
+  "run_id": "gh-45941415201-1",
+  "sha256": "8873ff9ea93013641cdd3873f5467845a005dc02032b994e13d1a88291b30311",
+  "source_id": "army_asc_updates",
+  "tier": "T1",
+  "url": "https://www.army.mil/asc"
+}

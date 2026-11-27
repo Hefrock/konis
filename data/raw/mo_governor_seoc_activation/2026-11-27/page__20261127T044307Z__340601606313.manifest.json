@@ -1,0 +1,16 @@
+{
+  "bytes": 34192,
+  "change_sha256": "4bc44a3a9418fb0d5341f23960d1981477d27711fe32378ecf1cff402a80684f",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched_at_utc": "2026-11-27T04:43:07.738554+00:00",
+  "file": "page__20261127T044307Z__340601606313.html",
+  "final_url": "https://governor.mo.gov/press-releases/archive/governor-kehoe-activates-state-emergency-operation-center-preparation",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Missouri Governor's Office",
+  "run_id": "gh-45941415201-1",
+  "sha256": "340601606313fc3b806afddf32d136f04c47004145099c2a3437029efacb93e7",
+  "source_id": "mo_governor_seoc_activation",
+  "tier": "T1",
+  "url": "https://governor.mo.gov/press-releases/archive/governor-kehoe-activates-state-emergency-operation-center-preparation"
+}

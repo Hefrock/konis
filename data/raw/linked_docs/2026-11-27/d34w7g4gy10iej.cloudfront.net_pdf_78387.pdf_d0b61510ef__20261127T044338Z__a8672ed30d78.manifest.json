@@ -1,0 +1,27 @@
+{
+  "bytes": 254672,
+  "change_sha256": "a8672ed30d787e0a9c5e4fc3e4f2358288aaa05f567ddbdc1380e09901bb3905",
+  "content_type": "application/pdf",
+  "fetched_at_utc": "2026-11-27T04:43:38.107561+00:00",
+  "file": "d34w7g4gy10iej.cloudfront.net_pdf_78387.pdf_d0b61510ef__20261127T044338Z__a8672ed30d78.pdf",
+  "final_url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78387.pdf",
+  "key": "d34w7g4gy10iej.cloudfront.net_pdf_78387.pdf_d0b61510ef",
+  "kind": "linked_doc",
+  "parent_raw_sha256": "8873ff9ea93013641cdd3873f5467845a005dc02032b994e13d1a88291b30311",
+  "parent_source_id": "army_asc_updates",
+  "parent_url": "https://www.army.mil/asc",
+  "publisher": "d34w7g4gy10iej.cloudfront.net",
+  "run_id": "gh-45941415201-1",
+  "sha256": "a8672ed30d787e0a9c5e4fc3e4f2358288aaa05f567ddbdc1380e09901bb3905",
+  "source_id": "linked_docs",
+  "state": {
+    "bytes": 254672,
+    "etag": "\"8a81a5d73d54f867895db240a6f10f1e\"",
+    "last_checked_utc": "2026-11-27T04:43:38.107561+00:00",
+    "last_modified": "Wed, 25 Nov 2026 00:05:02 GMT",
+    "sha256": "a8672ed30d787e0a9c5e4fc3e4f2358288aaa05f567ddbdc1380e09901bb3905",
+    "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78387.pdf"
+  },
+  "tier": "T1",
+  "url": "https://d34w7g4gy10iej.cloudfront.net/pubs/pdf_78387.pdf"
+}

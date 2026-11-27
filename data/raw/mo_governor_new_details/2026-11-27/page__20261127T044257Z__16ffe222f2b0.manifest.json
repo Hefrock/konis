@@ -1,0 +1,16 @@
+{
+  "bytes": 34846,
+  "change_sha256": "34abe4a19536ebdf7cc11cd5efaed9e2b1e1a154b5a6ec4a83dac478a2a0ac4a",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched_at_utc": "2026-11-27T04:42:57.964243+00:00",
+  "file": "page__20261127T044257Z__16ffe222f2b0.html",
+  "final_url": "https://governor.mo.gov/press-releases/archive/state-missouri-shares-new-details-planned-detonation-iowa-army-ammunition",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Missouri Governor's Office",
+  "run_id": "gh-45941415201-1",
+  "sha256": "16ffe222f2b08d91a9c40f52cca74b984c9c70accd06ee01ae38ca555b167d69",
+  "source_id": "mo_governor_new_details",
+  "tier": "T1",
+  "url": "https://governor.mo.gov/press-releases/archive/state-missouri-shares-new-details-planned-detonation-iowa-army-ammunition"
+}

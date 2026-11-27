@@ -1,0 +1,16 @@
+{
+  "bytes": 128200,
+  "change_sha256": "3dfe8474230e4286bb1b38e95ee423951165cebe1733187fb6bbab034f5f03c7",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched_at_utc": "2026-11-27T04:42:57.088081+00:00",
+  "file": "page__20261127T044257Z__3566dd7b086c.html",
+  "final_url": "https://dnr.mo.gov/iowa-lead-azide-detonation",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Missouri DNR",
+  "run_id": "gh-45941415201-1",
+  "sha256": "3566dd7b086c050694ca5f4a31b1a8931bae1ef390b354e384aca7f34732bc0c",
+  "source_id": "mo_dnr_detonation",
+  "tier": "T1",
+  "url": "https://dnr.mo.gov/iowa-lead-azide-detonation"
+}
