@@ -10,3 +10,4 @@
 | 26 Nov | Owner review of ADR 0009 (pre-registered Xact x wind analysis) | primary analysis | done 26 Nov: accepted and run |
 | 26 Nov | Owner review of ADR 0012 (Xact by distance; Part B is prospective) | transect analysis | done 26 Nov 13:20Z: accepted |
 | 27 Nov | Owner: choose code and data licenses (pyproject says MIT; no LICENSE file; data unlicensed) | public reuse of the archive | resolved 27 Nov: MIT (LICENSE) + CC BY 4.0 for konis-created data/docs (LICENSE-DATA.md) |
+| 27 Nov | Owner: enable GitHub Pages (Settings -> Pages -> Source: GitHub Actions) | public status page | open |

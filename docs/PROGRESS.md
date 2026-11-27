@@ -34,7 +34,7 @@ Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcrib
 2. DONE 27 Nov (ADR 0015; Zenodo link is an owner action). Tagged data releases (weekly), optionally archived to Zenodo for a DOI (owner links Zenodo).
 3. Reduce backup-trigger cost once GitHub's scheduler is reliable (owner: disable/re-enable
    ingest-live and watchdog in Actions), then remove or slow the hourly backup.
-4. Simple public status page (GitHub Pages) instead of the full Streamlit dashboard.
+4. DONE 27 Nov (ADR 0016; owner enables Pages). Simple public status page (GitHub Pages) instead of the full Streamlit dashboard.
 Not planned: more sensor sources or analyses (diminishing returns; EPA lab results are the
 key pending evidence, watched by the harvester).
 Licenses added 27 Nov: MIT for code; CC BY 4.0 for konis-created data/docs; third-party captures keep publishers' terms.
