@@ -41,6 +41,7 @@ uv run konis parse [--check]       # rebuild data/curated/ from raw; --check = r
 uv run konis guard --base <sha> [--bot]
 uv run konis analyze xact-wind|transect-a|transect-b [--new-out F]
 uv run konis seismic fetch|analyze
+uv run konis release build --out DIR --tag data-YYYY-MM-DD --commit SHA
 ```
 
 ## Layout
@@ -57,7 +58,8 @@ uv run konis seismic fetch|analyze
 | `data/curated/` | `xact_lead`, `airnow_hourly`, `weather_obs`, `ingestion_health`, `seismic_triggers` (CSV); `transect_partB.md` |
 | `data/seed/`, `data/reference/` | hand-transcribed figures; one-off reference checks |
 | `docs/results/` | analysis reports (named with the data-cut commit) |
-| `.github/workflows/` | `ingest_live` (capture, parse, Part B, alerts), `watchdog`, `ci` |
+| `.github/workflows/` | `ingest_live` (capture, parse, Part B, alerts), `watchdog`, `release_weekly` (ADR 0015), `ci` |
+| `src/konis/release.py`, `CITATION.cff` | weekly release builder; citation metadata |
 
 ## Operations
 
@@ -80,7 +82,8 @@ uv run konis seismic fetch|analyze
 CSV format · 0007 AirNow curated, network limits · 0008 linked-document harvester ·
 0009 Xact x wind (run: undefined, no comparison group) · 0010 curated weather ·
 0011 seismic detonation time · 0012 transect by distance (Part A done; Part B live) ·
-0013 Missouri and Army ASC sources, T0 confirmed · 0014 two-in-a-row alerts, Army model seed.
+0013 Missouri and Army ASC sources, T0 confirmed · 0014 two-in-a-row alerts, Army model seed ·
+0015 weekly data releases.
 
 ## Conventions
 

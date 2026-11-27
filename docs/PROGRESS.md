@@ -31,7 +31,7 @@ Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcrib
    found and its limits; drop handoff features that were not built (plume DiD on PM monitors,
    PurpleAir, resuspension gauge). Technical detail moves to CLAUDE.md / docs/, not the README.
    Fact-check every claim against docs/adr, docs/sources.md and the data.
-2. Tagged data releases (weekly), optionally archived to Zenodo for a DOI (owner links Zenodo).
+2. DONE 27 Nov (ADR 0015; Zenodo link is an owner action). Tagged data releases (weekly), optionally archived to Zenodo for a DOI (owner links Zenodo).
 3. Reduce backup-trigger cost once GitHub's scheduler is reliable (owner: disable/re-enable
    ingest-live and watchdog in Actions), then remove or slow the hourly backup.
 4. Simple public status page (GitHub Pages) instead of the full Streamlit dashboard.

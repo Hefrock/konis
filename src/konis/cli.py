@@ -127,6 +127,15 @@ def cmd_analyze(a) -> int:
     return 0
 
 
+def cmd_release(a) -> int:
+    from pathlib import Path
+
+    from konis import release
+    for f in release.build(Path(a.out), a.tag, a.commit):
+        print("wrote", f)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="konis")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -151,6 +160,12 @@ def main(argv: list[str] | None = None) -> int:
     an.add_argument("name", choices=["xact-wind", "transect-a", "transect-b"])
     an.add_argument("--new-out", help="transect-b: write newly completed episode ids here")
     an.set_defaults(fn=cmd_analyze)
+    rl = sub.add_parser("release", help="build weekly data release assets (ADR 0015)")
+    rl.add_argument("action", choices=["build"])
+    rl.add_argument("--out", required=True)
+    rl.add_argument("--tag", required=True)
+    rl.add_argument("--commit", required=True)
+    rl.set_defaults(fn=cmd_release)
     a = p.parse_args(argv)
     return a.fn(a)
 
