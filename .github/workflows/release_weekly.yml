@@ -1,0 +1,41 @@
+name: release-weekly
+
+# Weekly tagged data release (ADR 0015). Mondays 06:23 UTC; can also be run by hand.
+# Idempotent: if today's tag already exists, nothing happens.
+on:
+  schedule:
+    - cron: "23 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-live   # never tag while a capture run is committing
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --no-dev
+      - name: Tag name
+        run: echo "TAG=data-$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+      - name: Build and publish (skip if the tag exists)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "$TAG already exists; nothing to do"; exit 0
+          fi
+          out="$RUNNER_TEMP/release"
+          uv run --frozen konis release build --out "$out" --tag "$TAG" --commit "$(git rev-parse HEAD)"
+          gh release create "$TAG" --target "$(git rev-parse HEAD)" \
+            --title "konis data release $TAG" --notes-file "$out/NOTES.md" \
+            "$out/konis-$TAG.zip" "$out/MANIFEST.csv"

@@ -68,6 +68,9 @@ Everything is in this repository:
   air quality, weather, capture health). Every row says which raw file it came from.
 - [`data/seed/`](data/seed/): the few figures copied by hand from documents (for example the
   Army model areas), each citing its source file and page.
+- **Weekly releases** (`data-YYYY-MM-DD`, on the
+  [releases page](https://github.com/Hefrock/konis/releases)) are fixed snapshots to cite: each
+  has the tables as a zip and a list of every archived file with its fingerprint.
 - Documents too large for the repository (the EPA sampling plan and permit application) are
   attached to the [`docs-archive`](https://github.com/Hefrock/konis/releases/tag/docs-archive)
   release.

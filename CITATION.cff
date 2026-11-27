@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these data, please cite the archive and the specific data release."
+title: "konis: an independent archive of public data on the 2026 Iowa Army Ammunition Plant lead azide detonation"
+type: dataset
+authors:
+  - name: "Hefrock and the konis contributors"
+repository-code: "https://github.com/Hefrock/konis"
+license: CC-BY-4.0
+keywords:
+  - lead
+  - air quality
+  - environmental monitoring
+  - open data
+  - Iowa Army Ammunition Plant
+abstract: >-
+  Provenance-first archive of official pages, documents and environmental data published about
+  the 25 November 2026 controlled detonation of degraded lead azide at the Iowa Army Ammunition
+  Plant, Middletown, Iowa. Code is MIT-licensed; archived third-party content keeps its
+  publishers' terms (see LICENSE-DATA.md).
