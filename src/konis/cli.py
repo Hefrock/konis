@@ -136,6 +136,14 @@ def cmd_release(a) -> int:
     return 0
 
 
+def cmd_site(a) -> int:
+    from pathlib import Path
+
+    from konis import site
+    print("wrote", site.build(Path(a.out)))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="konis")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -166,6 +174,10 @@ def main(argv: list[str] | None = None) -> int:
     rl.add_argument("--tag", required=True)
     rl.add_argument("--commit", required=True)
     rl.set_defaults(fn=cmd_release)
+    st = sub.add_parser("site", help="build the static status page (ADR 0016)")
+    st.add_argument("action", choices=["build"])
+    st.add_argument("--out", default="site")
+    st.set_defaults(fn=cmd_site)
     a = p.parse_args(argv)
     return a.fn(a)
 

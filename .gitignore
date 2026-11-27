@@ -7,3 +7,4 @@ __pycache__/
 *.mseed
 .env
 data/_external_staging/
+site/
