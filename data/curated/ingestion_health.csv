@@ -40,7 +40,7 @@ date_utc,source_id,runs,runs_ok,runs_failed,stored,unchanged,empty,error,blocked
 2026-11-26,linked_docs,4,4,0,18,54,0,0,0,,health/1
 2026-11-26,metar_awc,20,20,0,20,0,0,0,0,,health/1
 2026-11-27,airnow_hourly,8,8,0,15,25,0,0,0,,health/1
-2026-11-27,army_article_297039,8,3,5,0,3,0,5,0,HTTP 404,health/1
+2026-11-27,army_article_297039,8,2,6,0,2,0,6,0,HTTP 404,health/1
 2026-11-27,army_article_297076,8,8,0,0,8,0,0,0,,health/1
 2026-11-27,army_article_297078,8,8,0,0,8,0,0,0,,health/1
 2026-11-27,army_article_297079,8,8,0,0,8,0,0,0,,health/1
