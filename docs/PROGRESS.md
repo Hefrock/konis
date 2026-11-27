@@ -37,4 +37,4 @@ Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcrib
 4. Simple public status page (GitHub Pages) instead of the full Streamlit dashboard.
 Not planned: more sensor sources or analyses (diminishing returns; EPA lab results are the
 key pending evidence, watched by the harvester).
-Open: no LICENSE file although pyproject says MIT; data license not stated (owner decision).
+Licenses added 27 Nov: MIT for code; CC BY 4.0 for konis-created data/docs; third-party captures keep publishers' terms.
