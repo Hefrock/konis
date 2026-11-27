@@ -32,5 +32,6 @@ Status: VERIFIED = fetched and inspected by this project; UNVERIFIED = known but
   run seasons to decades (urban soils, former smelters, mine waste).
 
 ## Checked and not adopted (27 Nov)
-- OpenAQ: 0 locations within 50 km of the origin (data/reference/openaq_locations.csv).
+- OpenAQ: 0 locations within 50 km of the origin (data/reference/openaq_locations.csv, run
+  45936268222). The one-off check's workflow and script were removed on 27 Nov; the result is kept.
 - PurpleAir: paid beyond starter points; owner declined.
