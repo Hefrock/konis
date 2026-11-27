@@ -21,7 +21,9 @@ Xact results on the IAAAP Response Data Viewer accurately, could you clarify:
 3. Whether `Mon_Date_Time` is recorded in UTC, and whether it marks the start or the end of
    the sampling interval.
 4. Whether results are preliminary and may later be revised or replaced by validated data.
-5. The exact detonation time used in EPA's analysis (Central time).
+5. How long EPA plans to continue Xact monitoring and publishing the results.
+6. Whether the 0.18 µg/m³ "air sampling method detection limit" shown on the Army's
+   24 Nov advisory applies to these Xact readings, and if not, which method it refers to.
 
 The viewer displays concentrations to one decimal place, so readings such as 0.01 µg/m³
 appear as 0.0. Knowing the detection limit would help readers interpret those values.
