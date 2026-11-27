@@ -9,6 +9,7 @@ description = "Provenance-first environmental surveillance archive for the 2026 
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
+license-files = ["LICENSE"]
 dependencies = ["requests>=2.31", "polars>=1.0"]
 
 [dependency-groups]

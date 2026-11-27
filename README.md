@@ -78,6 +78,12 @@ Everything is in this repository:
 - It does not replace official results. EPA and state laboratory results for air filters,
   soil, dust wipes and water are the evidence that matters; konis archives them when published.
 
+## License
+
+Code: [MIT](LICENSE). konis's own tables, notes and reports: [CC BY 4.0](LICENSE-DATA.md).
+The archived pages, documents and data files are copies of other organizations' publications
+and stay under their publishers' terms; see [LICENSE-DATA.md](LICENSE-DATA.md).
+
 ## For developers
 
 How the pipeline works, how to run it, and the rules it follows are in
