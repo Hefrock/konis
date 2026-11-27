@@ -1,0 +1,23 @@
+{
+  "bytes": 92266,
+  "change_sha256": "241eb924e5d7b654d9f041ace1d1d27880a73f8a47b9ffd3e1f1d872776a2e1e",
+  "content_type": "text/html;charset=utf-8",
+  "fetched_at_utc": "2026-11-27T22:03:03.204906+00:00",
+  "file": "page__20261127T220303Z__c73b8f7350c9.html",
+  "final_url": "https://epa.illinois.gov/iowa-plant-updates.html",
+  "key": "page",
+  "kind": "page",
+  "publisher": "Illinois EPA",
+  "redactions": [
+    {
+      "kind": "mapbox_token",
+      "sha256": "6cdeb9195162b49dd1af6f1cea647f520f4983f236273561f8c1eb60abbb33de"
+    }
+  ],
+  "run_id": "gh-46074077736-1",
+  "sha256": "c73b8f7350c9639856b55454d547e708cf4d9fc3723398b66598652c7b5fdb53",
+  "source_id": "iepa_updates",
+  "tier": "T1",
+  "upstream_sha256_before_redaction": "5389a52b3fc5eec30fefedbb7328ce5c5f4169b90f397ff9cb1859d6a99b5e9e",
+  "url": "https://epa.illinois.gov/iowa-plant-updates.html"
+}
