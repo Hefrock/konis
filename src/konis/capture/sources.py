@@ -80,6 +80,28 @@ SOURCES: tuple[Source, ...] = (
                note="PDF linked from the Illinois EPA updates page")
         for n in (77827, 78382)
     ),
+    # --- U.S. Army Sustainment Command: update page (maps, advisories, EA; ADR 0013) ---
+    Source("army_asc_updates", "page", "https://www.army.mil/asc", publisher="U.S. Army ASC",
+           must_contain=("lead azide",),
+           note="Army update page; links the advisories, Environmental Assessment and maps"),
+    # --- Missouri (plume forecast to drift south-west into Missouri; ADR 0013) ---
+    Source("mo_dnr_detonation", "page", "https://dnr.mo.gov/iowa-lead-azide-detonation",
+           publisher="Missouri DNR", must_contain=("lead",)),
+    *(
+        Source(f"mo_governor_{sid}", "page",
+               f"https://governor.mo.gov/press-releases/archive/{slug}",
+               publisher="Missouri Governor's Office", must_contain=("lead", "army"))
+        for sid, slug in (
+            ("post_detonation", ("governor-kehoes-statement-following-detonation-iowa-army-"
+             "ammunition-plant")),
+            ("new_details", ("state-missouri-shares-new-details-planned-detonation-iowa-army-"
+             "ammunition")),
+            ("public_animal_health", ("state-missouri-acting-ensure-public-and-animal-health-"
+             "preparation-us-armys")),
+            ("seoc_activation", ("governor-kehoe-activates-state-emergency-operation-center-"
+             "preparation")),
+        )
+    ),
     # --- Meteorology ---
     Source("metar_awc", "json",
            "https://aviationweather.gov/api/data/metar",

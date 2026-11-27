@@ -65,3 +65,10 @@ where the plume was expected, which is sensible for monitoring, but it means eve
 rather than replaced by a different comparison chosen after seeing the data. Lesson: check what
 contrast the data can support (here, station positions against the forecast wind) before
 writing the analysis plan.
+
+### 11. The date that moved (27 Nov 2026)
+The Army's earlier public advisories, still linked from its update page, announced the
+detonation for 20 November at about noon. It happened on 25 November at about 9 a.m. Anyone
+reading only the first advisory would have the wrong day and the wrong hour. An archive that
+keeps every version shows that the plan changed, and when, rather than only what finally
+happened (ADR 0013).

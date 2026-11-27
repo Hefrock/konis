@@ -21,3 +21,6 @@ ADR 0012 accepted 26 Nov 13:20Z (Part A exploratory; Part B prospective, data af
 Done 26 Nov: ADR 0012 Part A report (docs/results/transect-partA-da11702.md) and Part B
 episode detector in ingest-live (no episode yet; 25 Nov was wet at KBRL).
 Next: owner sends EPA request; PurpleAir key; dashboard, 7-day baseline, then HRRR and seismic.
+
+Done 27 Nov: Missouri and Army ASC sources (ADR 0013); detonation time confirmed by the Army.
+OpenAQ checked: no coverage within 50 km; low-cost sensors out of scope.

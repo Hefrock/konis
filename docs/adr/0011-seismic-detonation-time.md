@@ -1,6 +1,6 @@
 # ADR 0011: Detonation time from seismic and infrasound data (preliminary)
 
-Status: accepted as a method; result PRELIMINARY (26 Nov 2026). Superseded for analysis by
+Status: accepted as a method; result confirmed at minute precision by the Army (ADR 0013, 27 Nov 2026). Superseded for analysis by
 any T1 agency statement of the exact time, if one is published and agrees.
 
 ## Question

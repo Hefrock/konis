@@ -13,6 +13,9 @@ Status: VERIFIED = fetched and inspected by this project; UNVERIFIED = known but
 | iowa_hsemd_resources | Iowa HSEMD | T1 | VERIFIED 25 Nov | |
 | iowa_hhs_lead | Iowa HHS | T1 | VERIFIED 25 Nov | lead exposure surveillance |
 | army_article_* | U.S. Army | T1 | VERIFIED 25 Nov | 297039, 297076, 297078-297080 |
+| army_asc_updates | U.S. Army ASC | T1 | VERIFIED 27 Nov | states detonation ~9:00 a.m. CST; links EA and advisories (ADR 0013) |
+| mo_dnr_detonation | Missouri DNR | T1 | VERIFIED 27 Nov | |
+| mo_governor_* (4) | Missouri Governor's Office | T1 | VERIFIED 27 Nov | press releases |
 | metar_awc | NOAA AWC | T1 | VERIFIED 25 Nov | 3-hour window per run |
 | iem_asos | Iowa Environmental Mesonet | T1 | VERIFIED 25 Nov | yesterday + today, UTC |
 | airnow_hourly | EPA AirNow files | T1 (preliminary) | VERIFIED 25 Nov | ADR 0002 |
@@ -27,3 +30,8 @@ Status: VERIFIED = fetched and inspected by this project; UNVERIFIED = known but
   (J. Hazard. Mater., S0304389414008504).
 - No study found supporting a specific post-event monitoring duration; resuspension studies
   run seasons to decades (urban soils, former smelters, mine waste).
+
+## Checked and not adopted (27 Nov)
+- OpenAQ: 0 locations within 50 km of the origin (data/reference/openaq_locations.csv, run
+  45936268222). The one-off check's workflow and script were removed on 27 Nov; the result is kept.
+- PurpleAir: paid beyond starter points; owner declined.
