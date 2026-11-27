@@ -27,7 +27,7 @@ OpenAQ checked: no coverage within 50 km; low-cost sensors out of scope.
 Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcribed to data/seed/.
 
 ## Planned improvements (agreed 27 Nov 2026, in order)
-1. README rewrite: plain-language, human-readable account of what konis collects, what it
+1. DONE 27 Nov (repo-pincer audit: 6/22 claims confirmed; 4 High findings fixed). README rewrite: plain-language, human-readable account of what konis collects, what it
    found and its limits; drop handoff features that were not built (plume DiD on PM monitors,
    PurpleAir, resuspension gauge). Technical detail moves to CLAUDE.md / docs/, not the README.
    Fact-check every claim against docs/adr, docs/sources.md and the data.
@@ -37,3 +37,4 @@ Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcrib
 4. Simple public status page (GitHub Pages) instead of the full Streamlit dashboard.
 Not planned: more sensor sources or analyses (diminishing returns; EPA lab results are the
 key pending evidence, watched by the harvester).
+Open: no LICENSE file although pyproject says MIT; data license not stated (owner decision).
