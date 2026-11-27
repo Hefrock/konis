@@ -288,9 +288,15 @@
     "sha256": "adfb7783ce6d4fd7ccc4a39c06ea6a507950b7d0f0d70832ed07cfa9093f8fca"
   },
   "2026112718": {
+    "change_sha256": "a421bfe3aa18c7be1f065972d1076b4594ff2104dcca69b57f9a0f12ddbb1204",
+    "fetched_at_utc": "2026-11-27T20:03:23.105584+00:00",
+    "file": "airnow_hourly/2026-11-27/2026112718__20261127T200323Z__a421bfe3aa18.dat",
+    "sha256": "a421bfe3aa18c7be1f065972d1076b4594ff2104dcca69b57f9a0f12ddbb1204"
+  },
+  "2026112719": {
     "change_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "fetched_at_utc": "2026-11-27T19:03:50.751487+00:00",
-    "file": "airnow_hourly/2026-11-27/2026112718__20261127T190350Z__e3b0c44298fc.dat",
+    "fetched_at_utc": "2026-11-27T20:03:23.105584+00:00",
+    "file": "airnow_hourly/2026-11-27/2026112719__20261127T200323Z__e3b0c44298fc.dat",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "sites": {
