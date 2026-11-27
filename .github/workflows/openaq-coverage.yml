@@ -1,0 +1,38 @@
+name: openaq-coverage
+
+# One-off, manual: list OpenAQ locations near the site (no measurement data).
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-live   # share the data-commit lock with capture runs
+  cancel-in-progress: false
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --no-dev
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "BASE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: List OpenAQ locations within 50 km
+        env:
+          OPENAQ_API_KEY: ${{ secrets.OPENAQ_API_KEY }}
+        run: uv run --frozen python -m konis.reference.openaq_coverage | tee "$GITHUB_STEP_SUMMARY"
+      - name: Commit and push
+        run: |
+          git add data/reference
+          git diff --cached --quiet || git commit -q -m "data: OpenAQ coverage check ${GITHUB_RUN_ID}"
+          uv run --frozen konis guard --bot --base "$BASE_SHA"
+          .github/scripts/push-with-retry.sh "${GITHUB_REF_NAME}"
