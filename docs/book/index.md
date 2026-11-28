@@ -26,7 +26,7 @@ before looking at the answer, and re-check your own documents against your own c
 - **Part II, what the data could not say.** Monitors in the wrong place, evidence hidden
   behind a link, and an analysis that turned out to be impossible.
 - **Part III, keeping the archive honest.** Alerts people stop reading, a README that outran
-  the build, a diagnosis that read the wrong line, a gap in the record, and what it takes to
+  the build, a diagnosis that read the wrong line, a guard that depended on what it guarded, and what it takes to
   make something citable.
 
 Each chapter opens with an **edition box** (as-of date, the commit it was checked against, and
@@ -36,4 +36,4 @@ them.
 
 !!! note "Status"
     Every chapter is currently an outline: the structure, the sources and the questions are
-    set, the prose is not. Chapter 11 is blocked on evidence that has not been checked yet.
+    set, the prose is not. Chapter 11 still has three checks to run before it can be a draft.

@@ -43,7 +43,7 @@ nav:
       - part3/08-an-alarm-that-rang-every-hour.md
       - part3/09-the-readme-that-outran-the-build.md
       - part3/10-reading-the-log-not-the-line.md
-      - part3/11-the-gap-nobody-saw.md
+      - part3/11-the-guard-that-depended-on-what-it-guarded.md
       - part3/12-something-you-can-cite.md
   - Appendices:
       - appendix/invariants.md

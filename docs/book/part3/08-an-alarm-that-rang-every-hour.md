@@ -13,7 +13,7 @@ One Army page flickered between found and not found. It opened and closed three 
 
 ## What it taught
 
-A person learns to ignore an alarm like that and then misses the real one. TODO: link forward to chapter 11, where the real one was missed.
+A person learns to ignore an alarm like that and then misses the real one. TODO: link forward to chapter 11, where the guard itself depends on an unreliable trigger.
 
 ## Sources
 
