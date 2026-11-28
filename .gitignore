@@ -5,6 +5,7 @@ __pycache__/
 .ruff_cache/
 *.grib2
 *.mseed
+!data/raw/**/*.mseed
 .env
 data/_external_staging/
 site/
