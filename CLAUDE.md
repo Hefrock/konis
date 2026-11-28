@@ -43,6 +43,7 @@ uv run konis analyze xact-wind|transect-a|transect-b [--new-out F]
 uv run konis seismic fetch|analyze
 uv run konis release build --out DIR --tag data-YYYY-MM-DD --commit SHA
 uv run konis site build [--out site]   # static status page (ADR 0016)
+uv run konis verify [--assets-json F]  # re-hash raw files vs manifests (+ docs-archive assets)
 ```
 
 ## Layout
