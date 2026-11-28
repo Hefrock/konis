@@ -34,10 +34,14 @@ About once an hour, konis saves a copy of:
   plant, the direction the wind was forecast to carry dust.
 - **Regulatory air-quality monitors** (AirNow) and **airport weather** (Burlington and nearby).
 
-Each saved copy is stored exactly as received, with a fingerprint (a SHA-256 hash) that shows
-it has not been altered since. Nothing is filled in or smoothed: a gap stays a gap.
+Each saved copy is stored as received, with a fingerprint (a SHA-256 hash) that shows it has
+not been altered since; `konis verify` re-checks every fingerprint. Three documented
+exceptions: regional air-quality files are trimmed to the study area, anything that looks
+like a password or access key is blanked out before saving, and files too large for the
+repository are kept on a release page instead (details in [`CLAUDE.md`](CLAUDE.md)).
+Nothing is filled in or smoothed: a gap stays a gap.
 
-## What it has found so far (as of 27 November 2026)
+## What it has found so far (as of 28 November 2026)
 
 - **Detonation time.** About 9:00 a.m. CST on 25 November (15:00 UTC), as the Army states. A
   public seismometer and microphone 37 km away recorded ground motion at 15:00:38 UTC and the
@@ -49,6 +53,9 @@ it has not been altered since. Nothing is filled in or smoothed: a gap stays a g
   - EPA's public map rounds to one decimal place, so these small values appear there as "0.0".
   - EPA has not published the detection limit for these monitors, so a reported 0 cannot be
     read as "no lead", and a small positive value is not a confirmed detection.
+  - EPA's map has shown no new readings since 27 November at 7:21 a.m. CST (13:21 UTC), after
+    gaps of about 10 and 16 hours on 26-27 November. EPA has not said why; it does not mean
+    the air was measured and found clean.
 - **Army deposition model.** Before the detonation, the Army modelled lead settling on surfaces
   above EPA's floor-dust level (5 µg/ft²) over about 148 square miles, and above the
   window-sill level (100 µg/ft²) over about 27 square miles, in a band running south-west. This
