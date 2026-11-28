@@ -71,6 +71,41 @@ def latest_capture(raw: Path) -> str | None:
     return best
 
 
+def last_ok_check(logs: Path, source_id: str) -> str | None:
+    """Latest time the source was fetched successfully (stored or unchanged)."""
+    best = None
+    for f in logs.glob("*/*.jsonl"):
+        for line in f.read_text().splitlines():
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            if r.get("source_id") == source_id and r.get("status") in ("stored", "unchanged"):
+                t = r.get("fetched_at_utc")
+                if t and (best is None or t > best):
+                    best = t
+    return best
+
+
+STALE_HOURS = 6
+
+
+def xact_notice(latest_obs: datetime | None, last_check: str | None) -> str:
+    """Plain statement when EPA's layer is reachable but has no new readings (ADR 0016)."""
+    if latest_obs is None or last_check is None:
+        return ""
+    checked = _ts(last_check)
+    gap_h = (checked - latest_obs).total_seconds() / 3600
+    if gap_h < STALE_HOURS:
+        return ""
+    central = latest_obs.astimezone(__import__("zoneinfo").ZoneInfo("America/Chicago"))
+    return ('<div class="note"><b>No new readings from EPA since '
+            f'{latest_obs:%d %b %H:%M} UTC ({central:%-I:%M %p} CST {central:%d %b}).</b> '
+            f'konis last checked EPA\'s layer successfully at {checked:%d %b %H:%M} UTC '
+            f'({gap_h:.0f} hours later) and found nothing newer. This means EPA has not '
+            'published more readings; it does not say why, or what the monitors are measuring '
+            'now.</div>')
+
+
 def documents(raw: Path) -> list[dict]:
     docs: dict[str, dict] = {}
     for m in (raw / "linked_docs").glob("*/*.manifest.json"):
@@ -170,6 +205,8 @@ def build(out: Path, root: Path = Path(".")) -> Path:
     t0 = min((p["t"] for p in allp), default=datetime.now(UTC))
     t1 = max((p["t"] for p in allp), default=datetime.now(UTC))
     day, hrows = health(curated)
+    notice = xact_notice(t1 if allp else None,
+                         last_ok_check(root / "data/capture_log", "epa_xact_metals"))
     latest = latest_capture(raw)
     docs = documents(raw)
     seed = _rows(root / "data/seed/army_model_20261124.csv")
@@ -226,7 +263,7 @@ affiliated with the EPA, the U.S. Army or any state agency. Official information
 Grey points are readings EPA reported as 0; blue stems are readings reported above 0
 (hover for the value). For scale, the short-term screening level cited on EPA's map is
 32 µg/m³, thousands of times higher than the top of these axes.</p>
-<div class="grid4">{panels}</div>
+{notice}<div class="grid4">{panels}</div>
 <p class="muted">EPA has not published these monitors' detection limit, so a reported 0 is not
 "no lead" and a small positive value is not a confirmed detection. EPA's own map rounds to one
 decimal place and shows these values as 0.0. Data table:
