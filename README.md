@@ -14,6 +14,9 @@ about the controlled detonation of degraded lead azide at the Iowa Army Ammuniti
 > [Illinois EPA](https://epa.illinois.gov/iowa-plant-updates.html) ·
 > [Missouri DNR](https://dnr.mo.gov/iowa-lead-azide-detonation)
 
+**Live status page:** <https://hefrock.github.io/konis/>: the latest lead readings, capture
+health and archived documents, updated after every capture.
+
 ## Why this exists
 
 Agencies publish updates about an event like this on web pages and maps that show only the
