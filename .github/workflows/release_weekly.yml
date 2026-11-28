@@ -34,6 +34,10 @@ jobs:
           if gh release view "$TAG" >/dev/null 2>&1; then
             echo "$TAG already exists; nothing to do"; exit 0
           fi
+          # Integrity first: every raw file and docs-archive asset must match its manifest.
+          gh api "repos/${{ github.repository }}/releases/tags/docs-archive" --jq .assets \
+            > "$RUNNER_TEMP/assets.json"
+          uv run --frozen konis verify --assets-json "$RUNNER_TEMP/assets.json"
           out="$RUNNER_TEMP/release"
           uv run --frozen konis release build --out "$out" --tag "$TAG" --commit "$(git rev-parse HEAD)"
           gh release create "$TAG" --target "$(git rev-parse HEAD)" \

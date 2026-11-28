@@ -39,3 +39,8 @@ Not planned: more sensor sources or analyses (diminishing returns; EPA lab resul
 key pending evidence, watched by the harvester).
 Licenses added 27 Nov: MIT for code; CC BY 4.0 for konis-created data/docs; third-party captures keep publishers' terms.
 28 Nov: no new Xact readings since 27 Nov 13:21 UTC; EPA request updated. Workflow actions bumped to Node 24 majors.
+28 Nov: status page notes when the Xact layer is checked but stale (>= 6 h); README re-audited
+(as-of 28 Nov, Xact pause, stored-as-received exceptions). `konis verify` added: 260/260 raw
+files and 3/3 docs-archive assets match their manifests. The weekly release now runs
+`konis verify` first and stops if anything fails. GitHub's schedule fired twice on 28 Nov
+(01:24, 09:22 UTC); the hourly backup is still needed.
