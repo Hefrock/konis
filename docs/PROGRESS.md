@@ -38,3 +38,4 @@ Done 27 Nov: two-in-a-row alerts (ADR 0014); Army 24 Nov model figures transcrib
 Not planned: more sensor sources or analyses (diminishing returns; EPA lab results are the
 key pending evidence, watched by the harvester).
 Licenses added 27 Nov: MIT for code; CC BY 4.0 for konis-created data/docs; third-party captures keep publishers' terms.
+28 Nov: no new Xact readings since 27 Nov 13:21 UTC; EPA request updated. Workflow actions bumped to Node 24 majors.
