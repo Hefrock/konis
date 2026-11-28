@@ -1,0 +1,42 @@
+{
+  "bytes": 29141,
+  "change_sha256": "f45e069b24cb1c665637dcffe842c183c6219cdfe881e42583cbf84f53d16627",
+  "fetched_at_utc": "2026-11-28T00:04:16.738738+00:00",
+  "file": "2026-11-27__20261128T000416Z__f45e069b24cb.csv",
+  "key": "2026-11-27",
+  "kind": "iem_asos",
+  "params": {
+    "data": "all",
+    "day1": 27,
+    "day2": 28,
+    "direct": "no",
+    "elev": "yes",
+    "format": "onlycomma",
+    "latlon": "yes",
+    "missing": "empty",
+    "month1": 11,
+    "month2": 11,
+    "report_type": [
+      "3",
+      "4"
+    ],
+    "station": [
+      "BRL",
+      "MLI",
+      "OTM",
+      "IRK",
+      "UIN"
+    ],
+    "trace": "T",
+    "tz": "Etc/UTC",
+    "year1": 2026,
+    "year2": 2026
+  },
+  "publisher": "Iowa Environmental Mesonet (FAA/NWS ASOS)",
+  "rows": 138,
+  "run_id": "gh-46085708768-1",
+  "sha256": "f45e069b24cb1c665637dcffe842c183c6219cdfe881e42583cbf84f53d16627",
+  "source_id": "iem_asos",
+  "tier": "T1",
+  "url": "https://mesonet.agron.iastate.edu"
+}
