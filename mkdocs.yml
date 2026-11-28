@@ -1,0 +1,51 @@
+site_name: "konis: an archive, and what it taught us"
+site_description: >-
+  A teaching account of building an independent, provenance-first archive of public data
+  around the 25 November 2026 Iowa Army Ammunition Plant detonation.
+repo_url: https://github.com/Hefrock/konis
+edit_uri: edit/main/docs/book/
+docs_dir: docs/book
+site_dir: site-book          # not `site/`: that is the status page (ADR 0016)
+exclude_docs: |
+  _meta/
+strict: true
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+    - media: "(prefers-color-scheme: slate)"
+      scheme: slate
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+plugins:
+  - search
+nav:
+  - Preface: index.md
+  - "Part I: The first day":
+      - part1/01-a-page-that-changes.md
+      - part1/02-what-a-zero-means.md
+      - part1/03-the-secret-in-the-public-page.md
+      - part1/04-when-did-it-happen.md
+  - "Part II: What the data could not say":
+      - part2/05-no-monitor-where-the-plume-went.md
+      - part2/06-the-documents-behind-the-page.md
+      - part2/07-the-comparison-that-could-not-be-made.md
+  - "Part III: Keeping the archive honest":
+      - part3/08-an-alarm-that-rang-every-hour.md
+      - part3/09-the-readme-that-outran-the-build.md
+      - part3/10-reading-the-log-not-the-line.md
+      - part3/11-the-gap-nobody-saw.md
+      - part3/12-something-you-can-cite.md
+  - Appendices:
+      - appendix/invariants.md
+      - appendix/adr-index.md
+      - appendix/how-to-cite.md
