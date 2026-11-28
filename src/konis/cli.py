@@ -144,6 +144,22 @@ def cmd_site(a) -> int:
     return 0
 
 
+def cmd_verify(a) -> int:
+    import json
+    from pathlib import Path
+
+    from konis.verify import verify
+    assets = json.loads(Path(a.assets_json).read_text()) if a.assets_json else None
+    r = verify(Path("."), assets)
+    for line in r["problems"]:
+        print("PROBLEM", line)
+    ext = (f"{r['assets_ok']}/{r['external']} release assets match" if assets is not None
+           else f"{r['external']} release assets not checked (no --assets-json)")
+    print(f"{r['checked']} raw files match their manifests; {ext}; "
+          f"{len(r['problems'])} problems")
+    return 1 if r["problems"] else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="konis")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -178,6 +194,9 @@ def main(argv: list[str] | None = None) -> int:
     st.add_argument("action", choices=["build"])
     st.add_argument("--out", default="site")
     st.set_defaults(fn=cmd_site)
+    ve = sub.add_parser("verify", help="re-hash raw files against their manifests")
+    ve.add_argument("--assets-json", help="GitHub release assets JSON for docs-archive")
+    ve.set_defaults(fn=cmd_verify)
     a = p.parse_args(argv)
     return a.fn(a)
 

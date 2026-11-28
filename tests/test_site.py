@@ -27,3 +27,26 @@ def test_build_page(tmp_path):
     assert "My Plan.pdf" in html and "releases/download/docs-archive/abc__x.pdf" in html
     assert "HTTP 404" in html and "Unofficial and independent" in html
     assert "<script" not in html
+
+
+def test_xact_notice_only_when_layer_checked_but_stale():
+    from datetime import UTC, datetime
+
+    obs = datetime(2026, 11, 27, 13, 21, tzinfo=UTC)
+    stale = site.xact_notice(obs, "2026-11-28T03:49:17+00:00")
+    assert "No new readings from EPA since 27 Nov 13:21 UTC" in stale
+    assert "7:21 AM CST" in stale and "14 hours" in stale
+    assert site.xact_notice(obs, "2026-11-27T15:00:00+00:00") == ""   # under 6 h
+    assert site.xact_notice(obs, None) == ""                          # never checked
+    assert site.xact_notice(None, "2026-11-28T03:49:17+00:00") == ""
+
+
+def test_last_ok_check_ignores_failures(tmp_path):
+    d = tmp_path / "2026-11-28"
+    d.mkdir()
+    (d / "r.jsonl").write_text(
+        json.dumps({"source_id": "epa_xact_metals", "status": "unchanged",
+                    "fetched_at_utc": "2026-11-28T01:00:00+00:00"}) + "\n" +
+        json.dumps({"source_id": "epa_xact_metals", "status": "error",
+                    "fetched_at_utc": "2026-11-28T02:00:00+00:00"}) + "\n")
+    assert site.last_ok_check(tmp_path, "epa_xact_metals") == "2026-11-28T01:00:00+00:00"
