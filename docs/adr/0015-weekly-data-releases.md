@@ -22,3 +22,8 @@ owner action (Zenodo account), not automated here.
 Known limit: GitHub's scheduler has been unreliable for this repository (CLAUDE.md,
 Operations). A missed Monday is recovered by running the workflow by hand; the date in the tag
 is the day it actually ran.
+
+## Amendment (28 Nov 2026)
+
+Before building, the release job runs `konis verify` against the `docs-archive` asset
+listing. Any raw file or asset that does not match its manifest stops the release.
