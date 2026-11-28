@@ -44,3 +44,6 @@ Licenses added 27 Nov: MIT for code; CC BY 4.0 for konis-created data/docs; thir
 files and 3/3 docs-archive assets match their manifests. The weekly release now runs
 `konis verify` first and stops if anything fails. GitHub's schedule fired twice on 28 Nov
 (01:24, 09:22 UTC); the hourly backup is still needed.
+28 Nov: the first release run with verify stopped on a real gap: the ADR 0011 seismic waveform
+(N4.N41A, 1.3 MB) was never committed because `.gitignore` excluded `*.mseed`. Committed the
+original file (sha256 matches its 26 Nov manifest) and allowed `*.mseed` under data/raw.
