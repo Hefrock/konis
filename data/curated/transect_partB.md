@@ -1,6 +1,6 @@
 # ADR 0012 Part B: resuspension episodes (confirmatory, prospective)
 
-Analysis `transect/1`; data cut git `e7fde9c`. Uses only Xact readings after 2026-11-26T13:20:00+00:00 (ADR 0012 acceptance).
+Analysis `transect/1`; data cut git `fabb81f`. Uses only Xact readings after 2026-11-26T13:20:00+00:00 (ADR 0012 acceptance).
 
 Episode: 3 complete dry UTC days at KBRL, then a gust > 6.7 m/s; 12 h from the gust. Baseline: each station's readings in the prior 7 days outside any episode.
 
